@@ -67,6 +67,7 @@ body {
   object-fit: contain;
   image-rendering: pixelated;
   flex-shrink: 0;
+  cursor: pointer;
 }
 .g7bf .page-header .sprite[data-broken],
 .g8bf .page-header .sprite[data-broken] { display: none; }
@@ -93,6 +94,44 @@ body {
   text-transform: uppercase;
   margin-top: 0.25rem;
 }
+
+.g7bf .type-badges,
+.g8bf .type-badges {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0.2rem;
+}
+
+.g7bf .type-badge,
+.g8bf .type-badge {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.15rem 0.45rem;
+  color: #fff;
+  opacity: 0.88;
+}
+
+/* Type Chart */
+.type-normal   { background: #8a8a6e; }
+.type-fire     { background: #c84800; }
+.type-water    { background: #2870c8; }
+.type-electric { background: #a87800; }
+.type-grass    { background: #3d8a30; }
+.type-ice      { background: #2888a0; }
+.type-fighting { background: #8a2820; }
+.type-poison   { background: #682878; }
+.type-ground   { background: #9a7840; }
+.type-flying   { background: #486898; }
+.type-psychic  { background: #a81840; }
+.type-bug      { background: #587030; }
+.type-rock     { background: #786838; }
+.type-ghost    { background: #383870; }
+.type-dragon   { background: #3830b8; }
+.type-dark     { background: #383028; }
+.type-steel    { background: #487888; }
+.type-fairy    { background: #984868; }
 
 .g7bf .sets-label,
 .g8bf .sets-label {
@@ -185,23 +224,6 @@ body {
   word-break: break-word;
 }
 
-.g7bf .page-header .sprite,
-.g8bf .page-header .sprite {
-  cursor: pointer;
-}
-
-.g7bf .type-badges,
-.g8bf .type-badges {
-  display: flex;
-  gap: 0.3rem;
-  margin: 0.3rem 0 0.2rem;
-}
-.g7bf .type-badges .type-badge,
-.g8bf .type-badges .type-badge {
-  height: 14px;
-  image-rendering: pixelated;
-}
-
 .g7bf .item-icon,
 .g8bf .item-icon {
   width: 24px;
@@ -234,4 +256,3 @@ body {
 /* ============================================================
    g9bf is in dire need of a rework
    ============================================================ */
-

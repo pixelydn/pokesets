@@ -279,12 +279,12 @@ def type_badges_html(sid):
     types = TYPES.get(sid, [])
     if not types:
         return ''
-    imgs = ''.join(
-        '<img class="type-badge" src="{base}/{t}.png" alt="{t}">'.format(
-            base=TYPE_BASE, t=t)
+    spans = ''.join(
+        '<span class="type-badge type-{slug}">{name}</span>'.format(
+            slug=t.lower(), name=t.upper())
         for t in types
     )
-    return '<div class="type-badges">{}</div>'.format(imgs)
+    return '<div class="type-badges">{}</div>'.format(spans)
 
 # ── HTML builder ──────────────────────────────────────────────────────────────
 
@@ -313,11 +313,8 @@ def make_html(species, sets, tier):
         ivs       = s.get('ivs')
         happiness = s.get('happiness')
 
-        # Moves column
-        move_rows = ''
-        if level:
-            move_rows += row('Level', str(level))
-        move_rows += ''.join(
+        # Moves column — always exactly 4 rows
+        move_rows = ''.join(
             row('Move {}'.format(i+1), esc(fmt_list(slot)))
             for i, slot in enumerate(moves)
         )
@@ -332,7 +329,7 @@ def make_html(species, sets, tier):
             row('EVs',     esc(fmt_evs(s.get('evs',{}), happiness)))
         )
 
-        # Extra row — only when level or IVs present
+        # Extra row — level and/or IVs when present
         extra_tags = []
         if level:
             extra_tags.append('Lv {}'.format(level))
