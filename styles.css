@@ -254,5 +254,200 @@ body {
 }
 
 /* ============================================================
-   g9bf is in dire need of a rework
+   Gen 9 Battle Factory
    ============================================================ */
+   .g9bf {
+  --bg:          #1a1e26;
+  --surface:     #252b38;
+  --surface2:    #2e3648;
+  --border:      #3a4256;
+  --accent:      #e8a020;
+  --accent2:     #4a8fd4;
+  --text:        #d4dce8;
+  --text-dim:    #7a8ba0;
+ 
+  background:    var(--bg);
+  color:         var(--text);
+  font-family:   'Courier New', Courier, monospace;
+  padding:       2rem;
+  min-height:    100vh;
+}
+ 
+.g9bf .back-link {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.g9bf .back-link:hover { color: var(--accent); }
+ 
+.g9bf .page-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent);
+}
+ 
+.g9bf .page-header .sprite {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.g9bf .page-header .sprite[data-broken] { display: none; }
+.g9bf .page-header .name-block { flex: 1; }
+ 
+.g9bf .page-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+ 
+.g9bf .type-badges {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0.15rem;
+}
+ 
+.g9bf .type-badge {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.15rem 0.45rem;
+  color: #fff;
+  opacity: 0.88;
+}
+ 
+.g9bf .page-header .subtitle {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+.g9bf .mon-weight {
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.2rem;
+  opacity: 0.7;
+}
+ 
+.g9bf .sets-label {
+  color: var(--accent2);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+ 
+.g9bf .set-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent2);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+ 
+.g9bf .set-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+ 
+@media (max-width: 540px) {
+  .g9bf .set-inner { grid-template-columns: 1fr; }
+  .g9bf .set-moves { border-right: none; border-bottom: 1px solid var(--border); }
+}
+ 
+.g9bf .set-moves,
+.g9bf .set-stats {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.g9bf .set-moves { border-right: 1px solid var(--border); }
+ 
+.g9bf .row {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.42rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.87rem;
+  min-height: 2rem;
+}
+ 
+.g9bf .set-moves .row:last-child,
+.g9bf .set-stats .row:last-child { border-bottom: none; }
+ 
+.g9bf .row-label {
+  background: var(--surface2);
+  color: var(--text-dim);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding: 0 0.65rem;
+  margin: -0.42rem 0.5rem -0.42rem -0.75rem;
+  min-width: 64px;
+}
+ 
+.g9bf .set-stats .row-label { min-width: 78px; }
+ 
+.g9bf .row-value {
+  color: var(--text);
+  word-break: break-word;
+}
+ 
+.g9bf .item-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  image-rendering: pixelated;
+}
+
+.g9bf .tera-star {
+  color: var(--accent);
+  font-size: 0.72rem;
+  margin-left: 0.25rem;
+  vertical-align: middle;
+}
+
+.g9bf .set-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+ 
+.g9bf .extra-chip {
+  background: var(--surface2);
+  color: var(--text-dim);
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--border);
+}
+ 
