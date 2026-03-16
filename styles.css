@@ -2,7 +2,7 @@
    pokesets — unified stylesheet
    .g7bf = Gen 7 Battle Factory
    .g8bf = Gen 8 Battle Factory
-   .g9bf = Gen 9 battle Factory
+   .g9bf = Gen 9 Battle Factory
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,148 +17,9 @@ body {
 }
 
 /* ============================================================
-   Gen 7 Battle Factory  (.g7bf)
+   Gen 7 + Gen 8 Battle Factory
    ============================================================ */
-.g7bf {
-  --bg:          #1a1e26;
-  --surface:     #252b38;
-  --surface2:    #2e3648;
-  --border:      #3a4256;
-  --accent:      #e8a020;
-  --accent2:     #4a8fd4;
-  --text:        #d4dce8;
-  --text-dim:    #7a8ba0;
-
-  background:    var(--bg);
-  color:         var(--text);
-  font-family:   'Courier New', Courier, monospace;
-  padding:       2rem;
-  min-height:    100vh;
-}
-
-.g7bf .back-link {
-  display: inline-block;
-  margin-bottom: 1.25rem;
-  color: var(--text-dim);
-  text-decoration: none;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.g7bf .back-link:hover { color: var(--accent); }
-
-.g7bf .page-header {
-  display: flex;
-  align-items: flex-end;
-  gap: 1.25rem;
-  margin-bottom: 1.75rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid var(--accent);
-}
-
-.g7bf .page-header .sprite {
-  width: 96px;
-  height: 96px;
-  object-fit: contain;
-  image-rendering: pixelated;
-  flex-shrink: 0;
-}
-.g7bf .page-header .sprite[data-broken] { display: none; }
-
-.g7bf .page-header .name-block { flex: 1; }
-
-/* Grey title, I love this */
-.g7bf .page-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-
-.g7bf .page-header .subtitle {
-  color: var(--text-dim);
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-top: 0.25rem;
-}
-
-.g7bf .sets-label {
-  color: var(--accent2);
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 0.75rem;
-}
-
-.g7bf .set-block {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent2);
-  margin-bottom: 1rem;
-  overflow: hidden;
-}
-
-.g7bf .set-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-@media (max-width: 540px) {
-  .g7bf .set-inner { grid-template-columns: 1fr; }
-  .g7bf .set-moves { border-right: none; border-bottom: 1px solid var(--border); }
-}
-
-.g7bf .set-moves {
-  border-right: 1px solid var(--border);
-}
-
-.g7bf .row {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  padding: 0.42rem 0.75rem;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.87rem;
-  min-height: 2rem;
-}
-.g7bf .set-moves .row:last-child,
-.g7bf .set-stats .row:last-child {
-  border-bottom: none;
-}
-
-.g7bf .row-label {
-  background: var(--surface2);
-  color: var(--text-dim);
-  font-size: 0.76rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex-shrink: 0;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  padding: 0 0.65rem;
-  margin: -0.42rem 0.5rem -0.42rem -0.75rem;
-  min-width: 64px;
-}
-
-.g7bf .set-stats .row-label { min-width: 78px; }
-
-.g7bf .row-value {
-  color: var(--text);
-  word-break: break-word;
-}
-
-.g7bf .set-moves .row-value { color: var(--text); }
-
-/* ============================================================
-   Gen 8 Battle Factory  (.g8bf)
-   ============================================================ */
+.g7bf,
 .g8bf {
   --bg:          #1a1e26;
   --surface:     #252b38;
@@ -176,6 +37,7 @@ body {
   min-height:    100vh;
 }
 
+.g7bf .back-link,
 .g8bf .back-link {
   display: inline-block;
   margin-bottom: 1.25rem;
@@ -185,8 +47,10 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+.g7bf .back-link:hover,
 .g8bf .back-link:hover { color: var(--accent); }
 
+.g7bf .page-header,
 .g8bf .page-header {
   display: flex;
   align-items: flex-end;
@@ -196,6 +60,7 @@ body {
   border-bottom: 2px solid var(--accent);
 }
 
+.g7bf .page-header .sprite,
 .g8bf .page-header .sprite {
   width: 96px;
   height: 96px;
@@ -203,11 +68,14 @@ body {
   image-rendering: pixelated;
   flex-shrink: 0;
 }
+.g7bf .page-header .sprite[data-broken],
 .g8bf .page-header .sprite[data-broken] { display: none; }
 
+.g7bf .page-header .name-block,
 .g8bf .page-header .name-block { flex: 1; }
 
 /* Grey title, I love this */
+.g7bf .page-header h1,
 .g8bf .page-header h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -217,6 +85,7 @@ body {
   line-height: 1.1;
 }
 
+.g7bf .page-header .subtitle,
 .g8bf .page-header .subtitle {
   color: var(--text-dim);
   font-size: 0.8rem;
@@ -225,6 +94,7 @@ body {
   margin-top: 0.25rem;
 }
 
+.g7bf .sets-label,
 .g8bf .sets-label {
   color: var(--accent2);
   font-size: 0.82rem;
@@ -234,6 +104,7 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.g7bf .set-block,
 .g8bf .set-block {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -242,34 +113,52 @@ body {
   overflow: hidden;
 }
 
+.g7bf .set-inner,
 .g8bf .set-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 @media (max-width: 540px) {
+  .g7bf .set-inner,
   .g8bf .set-inner { grid-template-columns: 1fr; }
+  .g7bf .set-moves,
   .g8bf .set-moves { border-right: none; border-bottom: 1px solid var(--border); }
 }
 
+.g7bf .set-moves,
+.g7bf .set-stats,
+.g8bf .set-moves,
+.g8bf .set-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.g7bf .set-moves,
 .g8bf .set-moves {
   border-right: 1px solid var(--border);
 }
 
+.g7bf .row,
 .g8bf .row {
   display: flex;
-  align-items: baseline;
+  flex: 1;
+  align-items: center;
   gap: 0.5rem;
   padding: 0.42rem 0.75rem;
   border-bottom: 1px solid var(--border);
   font-size: 0.87rem;
   min-height: 2rem;
 }
+
+.g7bf .set-moves .row:last-child,
+.g7bf .set-stats .row:last-child,
 .g8bf .set-moves .row:last-child,
 .g8bf .set-stats .row:last-child {
   border-bottom: none;
 }
 
+.g7bf .row-label,
 .g8bf .row-label {
   background: var(--surface2);
   color: var(--text-dim);
@@ -287,16 +176,62 @@ body {
   min-width: 64px;
 }
 
+.g7bf .set-stats .row-label,
 .g8bf .set-stats .row-label { min-width: 78px; }
 
+.g7bf .row-value,
 .g8bf .row-value {
   color: var(--text);
   word-break: break-word;
 }
 
-.g8bf .set-moves .row-value { color: var(--text); }
+.g7bf .page-header .sprite,
+.g8bf .page-header .sprite {
+  cursor: pointer;
+}
 
+.g7bf .type-badges,
+.g8bf .type-badges {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.3rem 0 0.2rem;
+}
+.g7bf .type-badges .type-badge,
+.g8bf .type-badges .type-badge {
+  height: 14px;
+  image-rendering: pixelated;
+}
+
+.g7bf .item-icon,
+.g8bf .item-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  image-rendering: pixelated;
+}
+
+.g7bf .set-extra,
+.g8bf .set-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.g7bf .extra-chip,
+.g8bf .extra-chip {
+  background: var(--surface2);
+  color: var(--text-dim);
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--border);
+}
 
 /* ============================================================
    g9bf is in dire need of a rework
    ============================================================ */
+
