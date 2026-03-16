@@ -262,18 +262,15 @@ def row(label, value):
     ).format(label, value)
 
 def item_html(items):
-    """Item row value: icon for first item + all items as text."""
     cleaned = [x for x in items if x != '']
     if not cleaned:
-        return '\u2014'
-    first_id = item_id(cleaned[0])
-    icon = (
-        '<img class="item-icon" '
-        'src="{base}/{iid}.png" '
-        'onerror="this.style.display=\'none\'" '
-        'alt="">'.format(base=ITEM_BASE, iid=first_id)
-    )
-    return icon + esc(' / '.join(cleaned))
+        return '—'
+    parts = []
+    for it in cleaned:
+        src = ITEM_BASE + '/' + item_id(it) + '.png'
+        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=\'none\'" alt="">'
+        parts.append(icon + esc(it))
+    return ' / '.join(parts)
 
 def type_badges_html(sid):
     types = TYPES.get(sid, [])

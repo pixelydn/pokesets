@@ -263,13 +263,13 @@ def row(label, value):
 def item_html(items):
     cleaned = [x for x in items if x != '']
     if not cleaned:
-        return '\u2014'
-    icon = (
-        '<img class="item-icon" src="{base}/{iid}.png"'
-        ' onerror="this.style.display=\'none\'" alt="">'.format(
-            base=ITEM_BASE, iid=item_id(cleaned[0]))
-    )
-    return icon + esc(' / '.join(cleaned))
+        return '—'
+    parts = []
+    for it in cleaned:
+        src = ITEM_BASE + '/' + item_id(it) + '.png'
+        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=\'none\'" alt="">'
+        parts.append(icon + esc(it))
+    return ' / '.join(parts)
 
 def type_badges_html(sid):
     types = TYPES.get(sid, [])
