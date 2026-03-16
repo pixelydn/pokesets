@@ -1,12 +1,12 @@
 """
-Gen 8 Battle Factory — HTML page generator
+Gen 7 Battle Factory — HTML page generator
 Usage:
-    python generate_g8bf.py <path/to/factory-sets.json> <output_dir> [TIER1 TIER2 ...]
+    python generate_g7bf.py <path/to/factory-sets.json> <output_dir> [TIER1 TIER2 ...]
 
 Output structure:
     <output_dir>/
         styles.css
-        gen8/battle-factory/<Tier>/<slug>/index.html
+        gen7/battle-factory/<Tier>/<slug>/index.html
 """
 
 import json, os, sys, re, shutil
@@ -358,17 +358,17 @@ def make_html(species, sets, tier):
         '<head>',
         '  <meta charset="UTF-8">',
         '  <meta name="viewport" content="width=device-width, initial-scale=1">',
-        '  <title>{} \u2014 Gen 8 Battle Factory</title>'.format(esc(species)),
+        '  <title>{} \u2014 Gen 7 Battle Factory</title>'.format(esc(species)),
         '  <link rel="stylesheet" href="../../../../styles.css">',
         '</head>',
-        '<body class="g8bf">',
+        '<body class="g7bf">',
         '  <a class="back-link" href="../">\u2190 {}</a>'.format(esc(tier)),
         '  <div class="page-header">',
         '    {}'.format(sprite_tag),
         '    <div class="name-block">',
         '      <h1>{}</h1>'.format(esc(species)),
         '      {}'.format(type_badges_html(sid)),
-        '      <p class="subtitle">Gen 8 Battle Factory \u2014 {}</p>'.format(esc(tier)),
+        '      <p class="subtitle">Gen 7 Battle Factory \u2014 {}</p>'.format(esc(tier)),
         '    </div>',
         '  </div>',
         '  <p class="sets-label">Set(s):</p>',
@@ -402,7 +402,7 @@ def main():
         for slug, mon_data in data[tier].items():
             species = mon_data['sets'][0]['species']
             html    = make_html(species, mon_data['sets'], tier)
-            rel     = os.path.join('gen8', 'battle-factory', tier, slug, 'index.html')
+            rel     = os.path.join('gen7', 'battle-factory', tier, slug, 'index.html')
             full    = os.path.join(output_dir, rel)
             os.makedirs(os.path.dirname(full), exist_ok=True)
             with open(full, 'w', encoding='utf-8') as fh:
