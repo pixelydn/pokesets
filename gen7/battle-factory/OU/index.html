@@ -14,9 +14,24 @@
         <img src="https://play.pokemonshowdown.com/pokemonshowdown.png">
     </a>
     <div class="index-header">
-    <h1 class="index-title">OU Pokémon Sets</h1>
-    <p class="index-sub">Gen 7 Battle Factory</p>
-  </div>
+        <h1 class="index-title">OU Pokémon Sets</h1>
+        <p class="index-sub">Gen 7 Battle Factory</p>
+    </div>
     <input class="search-bar" type="search" placeholder="Search…" autofocus>
-
+    <br>
+    <div class="mon-grid">
+        <a class="mon-card" href="garchomp/" data-name="Garchomp">
+            <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif"
+                data-front="https://play.pokemonshowdown.com/sprites/gen5ani/garchomp.gif"
+                data-back="https://play.pokemonshowdown.com/sprites/gen5ani-back/garchomp.gif"
+                onmouseover="this.src=this.dataset.back" onmouseout="this.src=this.dataset.front">
+            <div class="mon-info">
+                <span class="mon-name">Garchomp</span>
+                <div class="mon-types">
+                    <span class="type-badge type-dragon">DRAGON</span>
+                    <span class="type-badge type-ground">GROUND</span>
+                </div>
+            </div>
+        </a>
+    </div>
 </body>
