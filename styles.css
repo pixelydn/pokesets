@@ -17,6 +17,154 @@ body {
 }
 
 /* ============================================================
+   Index Pages
+   ============================================================ */
+.index-header {
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto 2rem;
+  position: relative;
+  padding-top: 1rem;
+}
+ 
+.index-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+ 
+.index-sub {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0.35rem 0 1.1rem;
+}
+
+.showdown-link {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.6rem;
+  transition: color 0.15s, border-color 0.15s;
+}
+.showdown-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.search-bar {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-bottom: 2px solid var(--accent2);
+  color: var(--text);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.87rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  letter-spacing: 0.04em;
+}
+.search-bar:focus {
+  border-bottom-color: var(--accent);
+}
+
+.mon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 0.6rem;
+}
+ 
+.mon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 0.5rem 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--border);
+  text-decoration: none;
+  transition: border-top-color 0.12s, background 0.12s;
+}
+.mon-card:hover {
+  background: var(--surface2);
+  border-top-color: var(--accent2);
+}
+ 
+.mon-sprite {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+.mon-sprite[data-broken] { display: none; }
+ 
+.mon-info {
+  text-align: center;
+  margin-top: 0.4rem;
+}
+ 
+.mon-name {
+  display: block;
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+ 
+.mon-types {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.tier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+ 
+.tier-row {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent2);
+  text-decoration: none;
+  transition: background 0.12s, border-left-color 0.12s;
+}
+.tier-row:hover {
+  background: var(--surface2);
+  border-left-color: var(--accent);
+}
+ 
+.tier-name {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  /*text-transform: uppercase;*/
+}
+
+/* ============================================================
    Gen 7 + Gen 8 Battle Factory
    ============================================================ */
 .g7bf,
