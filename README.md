@@ -7,4 +7,4 @@ Sources of sets are coming from the [offcial repo of Showdown](https://github.co
 - Any other meta I am enjoying
 
 ## AI Disclosure
-Claude is used to organized the data and writing the search function for this project.
+Claude is used to organized the data (writing all the python scripts) and writing the search function for this project.

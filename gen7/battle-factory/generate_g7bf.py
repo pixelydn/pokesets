@@ -264,11 +264,11 @@ def row(label, value):
 def item_html(items):
     cleaned = [x for x in items if x != '']
     if not cleaned:
-        return '—'
+        return '\u2014'
     parts = []
     for it in cleaned:
         src = ITEM_BASE + '/' + item_id(it) + '.png'
-        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=\'none\'" alt="">'
+        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=&apos;none&apos;" alt="">'
         parts.append(icon + esc(it))
     return ' / '.join(parts)
 

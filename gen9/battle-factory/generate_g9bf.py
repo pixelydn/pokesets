@@ -24,6 +24,7 @@ TYPES = {
     'abomasnow':['Grass','Ice'],'absol':['Dark'],'accelgor':['Bug'],
     'aegislash':['Steel','Ghost'],'aerodactyl':['Rock','Flying'],
     'aggron':['Steel','Rock'],'alakazam':['Psychic'],'alomomola':['Water'],
+    'amaura': ['Rock', 'Ice'],
     'altaria':['Dragon','Flying'],'ambipom':['Normal'],'amoonguss':['Grass','Poison'],
     'ampharos':['Electric'],'araquanid':['Water','Bug'],'arcanine':['Fire'],
     'arceus':['Normal'],'arceus-dark':['Dark'],'arceus-dragon':['Dragon'],
@@ -44,6 +45,9 @@ TYPES = {
     'brambleghast':['Grass','Ghost'],'braviary':['Normal','Flying'],
     'braviary-hisui':['Psychic','Flying'],'breloom':['Grass','Fighting'],
     'bronzong':['Steel','Psychic'],'bruxish':['Water','Psychic'],
+    'bulbasaur': ['Grass', 'Poison'],
+    'buneary': ['Normal'],
+    'bunnelby': ['Normal'],
     'buzzwole':['Bug','Fighting'],
     'cacturne':['Grass','Dark'],'calyrex-ice':['Psychic','Ice'],
     'calyrex-shadow':['Psychic','Ghost'],'camerupt':['Fire','Ground'],
@@ -96,6 +100,7 @@ TYPES = {
     'gothitelle':['Psychic'],'great-tusk':['Ground','Fighting'],
     'greattusk':['Ground','Fighting'],'greninja':['Water','Dark'],
     'greninja-bond':['Water','Dark'],'grimmsnarl':['Dark','Fairy'],
+    'grimer-alola': ['Poison', 'Dark'],
     'gyarados':['Water','Flying'],
     'hariyama':['Fighting'],'hatterene':['Psychic','Fairy'],
     'haunter':['Ghost','Poison'],'hawlucha':['Fighting','Flying'],
@@ -163,11 +168,11 @@ TYPES = {
     'salazzle':['Poison','Fire'],'samurott-hisui':['Water','Dark'],
     'sandaconda':['Ground'],'sandslash-alola':['Ice','Steel'],
     'sandyshocks':['Electric','Ground'],'scizor':['Bug','Steel'],
-    'scrafty':['Dark','Fighting'],'screamtail':['Normal','Psychic'],
+    'scrafty':['Dark','Fighting'],'screamtail':['Fairy','Psychic'],
     'scyther':['Bug','Flying'],'serperior':['Grass'],
     'sinistcha':['Grass','Ghost'],'skarmory':['Steel','Flying'],
     'skeledirge':['Fire','Ghost'],'skuntank':['Poison','Dark'],
-    'slitherwing':['Bug','Fire'],'slowbro':['Water','Psychic'],
+    'slitherwing':['Bug','Fighting'],'slowbro':['Water','Psychic'],
     'slowbro-galar':['Poison','Psychic'],'slowking':['Water','Psychic'],
     'slowking-galar':['Poison','Psychic'],'sneasel':['Dark','Ice'],
     'sneasel-hisui':['Fighting','Poison'],'suicune':['Water'],
@@ -196,7 +201,7 @@ TYPES = {
     'zamazenta-crowned':['Fighting','Steel'],
     'zapdos':['Electric','Flying'],'zapdos-galar':['Fighting','Flying'],
     'zarude':['Dark','Grass'],'zekrom':['Dragon','Electric'],
-    'zeraora':['Electric'],'zoroark':['Normal','Ghost'],
+    'zeraora':['Electric'],'zoroark':['Dark'],
     'zoroark-hisui':['Normal','Ghost'],
 }
 
@@ -263,11 +268,11 @@ def row(label, value):
 def item_html(items):
     cleaned = [x for x in items if x != '']
     if not cleaned:
-        return '—'
+        return '\u2014'
     parts = []
     for it in cleaned:
         src = ITEM_BASE + '/' + item_id(it) + '.png'
-        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=\'none\'" alt="">'
+        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=&apos;none&apos;" alt="">'
         parts.append(icon + esc(it))
     return ' / '.join(parts)
 

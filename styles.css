@@ -111,8 +111,10 @@ body {
 .mon-sprite[data-broken] { display: none; }
  
 .mon-info {
-  text-align: center;
-  margin-top: 0.4rem;
+  text-align: left;
+  margin-top: 0;
+  flex: 1;
+  padding-left: 0.75rem;
 }
  
 .mon-name {
@@ -127,7 +129,7 @@ body {
  
 .mon-types {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 0.2rem;
 }
