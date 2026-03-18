@@ -205,44 +205,6 @@ TYPES = {
     'zoroark-hisui':['Normal','Ghost'],
 }
 
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import urllib.request
-
-def sprite_exists(url):
-    try:
-        req = urllib.request.Request(url, method='HEAD')
-        urllib.request.urlopen(req, timeout=5)
-        return True
-    except:
-        return False
-
-def check_sprites(sids):
-    """Returns {sid: (front_url, back_url)} using gif if available, png fallback otherwise."""
-    base   = SPRITE_BASE
-    tasks  = {}
-    result = {}
-
-    with ThreadPoolExecutor(max_workers=20) as pool:
-        for sid in sids:
-            front_gif = base + '/gen5ani/' + sid + '.gif'
-            back_gif  = base + '/gen5ani-back/' + sid + '.gif'
-            static    = base + '/gen5/' + sid + '.png'
-            tasks[pool.submit(sprite_exists, front_gif)] = ('front', sid, front_gif, static)
-            tasks[pool.submit(sprite_exists, back_gif)]  = ('back',  sid, back_gif,  static)
-
-        for future in as_completed(tasks):
-            kind, sid, gif, static = tasks[future]
-            url = gif if future.result() else static
-            if sid not in result:
-                result[sid] = [None, None]
-            if kind == 'front':
-                result[sid][0] = url
-            else:
-                result[sid][1] = url
-
-    return {sid: (urls[0], urls[1]) for sid, urls in result.items()}
-
-
 SPRITE_BASE = 'https://play.pokemonshowdown.com/sprites'
 ITEM_BASE   = 'https://play.pokemonshowdown.com/sprites/itemicons'
 
@@ -309,8 +271,8 @@ def item_html(items):
         return '\u2014'
     parts = []
     for it in cleaned:
-        src  = ITEM_BASE + '/' + item_id(it) + '.png'
-        icon = '<img class="item-icon" src="' + src + '" onerror="this.remove()" alt="">'
+        src = ITEM_BASE + '/' + item_id(it) + '.png'
+        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=&apos;none&apos;" alt="">'
         parts.append(icon + esc(it))
     return ' / '.join(parts)
 
@@ -348,12 +310,12 @@ def make_html(species, sets, tier, mon_weight_pct):
     sprite_tag = (
         '<img class="sprite"'
         ' src="{front}" data-front="{front}" data-back="{back}"'
-        
-        
+        ' onmouseover="this.src=this.dataset.back"'
+        ' onmouseout="this.src=this.dataset.front"'
         ' onerror="this.onerror=null;this.src=\'{static}\';'
         'this.onmouseover=null;this.onmouseout=null"'
         ' alt="{name}">'
-    ).format(front=front_url, back=back_url, name=esc(species))
+    ).format(front=front_url, back=back_url, static=static_url, name=esc(species))
 
     cards = ''
     for s in sets:
@@ -412,7 +374,6 @@ def make_html(species, sets, tier, mon_weight_pct):
             '</div>{extra}'
             '</div>\n'
         ).format(moves=move_rows, stats=stat_rows, extra=extra_html)
-
 
     return '\n'.join([
         '<!DOCTYPE html>',

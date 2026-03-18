@@ -267,6 +267,7 @@ def main():
         sid   = sprite_id(species)
         front  = SPRITE + '/gen5ani/' + sid + '.gif'
         back   = SPRITE + '/gen5ani-back/' + sid + '.gif'
+        static = SPRITE + '/gen5/' + sid + '.png'
         name  = species.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
         badges = ''.join(
@@ -282,13 +283,13 @@ def main():
             '    data-back="{back}"\n'
             '    onmouseover="this.src=this.dataset.back"\n'
             '    onmouseout="this.src=this.dataset.front"\n'
-            '\n'
+            '    onerror="this.onerror=null;this.src=&apos;{static}&apos;;this.onmouseover=null;this.onmouseout=null"\n'
             '    alt="{name}">\n'
             '  <div class="mon-info">\n'
             '    <span class="mon-name">{name}</span>\n'
             '    <div class="mon-types">{badges}</div>\n'
             '  </div>\n'
-            '</a>'.format(slug=slug, name=name, front=front, back=back, badges=badges)
+            '</a>'.format(slug=slug, name=name, front=front, back=back, static=static, badges=badges)
         )
 
 

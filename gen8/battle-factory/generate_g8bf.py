@@ -199,44 +199,6 @@ TYPES = {
     'zigzagoon':['Normal'],'zygarde':['Dragon','Ground'],'zygarde-10%':['Dragon','Ground'],
 }
 
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import urllib.request
-
-def sprite_exists(url):
-    try:
-        req = urllib.request.Request(url, method='HEAD')
-        urllib.request.urlopen(req, timeout=5)
-        return True
-    except:
-        return False
-
-def check_sprites(sids):
-    """Returns {sid: (front_url, back_url)} using gif if available, png fallback otherwise."""
-    base   = SPRITE_BASE
-    tasks  = {}
-    result = {}
-
-    with ThreadPoolExecutor(max_workers=20) as pool:
-        for sid in sids:
-            front_gif = base + '/gen5ani/' + sid + '.gif'
-            back_gif  = base + '/gen5ani-back/' + sid + '.gif'
-            static    = base + '/gen5/' + sid + '.png'
-            tasks[pool.submit(sprite_exists, front_gif)] = ('front', sid, front_gif, static)
-            tasks[pool.submit(sprite_exists, back_gif)]  = ('back',  sid, back_gif,  static)
-
-        for future in as_completed(tasks):
-            kind, sid, gif, static = tasks[future]
-            url = gif if future.result() else static
-            if sid not in result:
-                result[sid] = [None, None]
-            if kind == 'front':
-                result[sid][0] = url
-            else:
-                result[sid][1] = url
-
-    return {sid: (urls[0], urls[1]) for sid, urls in result.items()}
-
-
 SPRITE_BASE = 'https://play.pokemonshowdown.com/sprites'
 TYPE_BASE   = 'https://play.pokemonshowdown.com/sprites/types'
 ITEM_BASE   = 'https://play.pokemonshowdown.com/sprites/itemicons'
@@ -305,8 +267,8 @@ def item_html(items):
         return '\u2014'
     parts = []
     for it in cleaned:
-        src  = ITEM_BASE + '/' + item_id(it) + '.png'
-        icon = '<img class="item-icon" src="' + src + '" onerror="this.remove()" alt="">'
+        src = ITEM_BASE + '/' + item_id(it) + '.png'
+        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=&apos;none&apos;" alt="">'
         parts.append(icon + esc(it))
     return ' / '.join(parts)
 
@@ -323,18 +285,23 @@ def type_badges_html(sid):
 
 # ── HTML builder ──────────────────────────────────────────────────────────────
 
-def make_html(species, sets, tier, sprite_urls):
-    sid        = sprite_id(species)
-    static_url = '{}/gen5/{}.png'.format(SPRITE_BASE, sid)
-    front_url, back_url = sprite_urls.get(sid, (static_url, static_url))
+def make_html(species, sets, tier):
+    sid         = sprite_id(species)
+    front_url   = '{}/gen5ani/{}.gif'.format(SPRITE_BASE, sid)
+    back_url    = '{}/gen5ani-back/{}.gif'.format(SPRITE_BASE, sid)
+    static_url  = '{}/gen5/{}.png'.format(SPRITE_BASE, sid)
 
     sprite_tag = (
         '<img class="sprite"'
         ' src="{front}"'
         ' data-front="{front}"'
         ' data-back="{back}"'
+        ' onmouseover="this.src=this.dataset.back"'
+        ' onmouseout="this.src=this.dataset.front"'
+        ' onerror="this.onerror=null;this.src=\'{static}\';'
+        'this.onmouseover=null;this.onmouseout=null"'
         ' alt="{name}">'
-    ).format(front=front_url, back=back_url, name=esc(species))
+    ).format(front=front_url, back=back_url, static=static_url, name=esc(species))
 
     cards = ''
     for s in sets:
@@ -378,7 +345,6 @@ def make_html(species, sets, tier, sprite_urls):
             '</div>{extra}'
             '</div>\n'
         ).format(moves=move_rows, stats=stat_rows, extra=extra_html)
-
 
     return '\n'.join([
         '<!DOCTYPE html>',
@@ -427,12 +393,9 @@ def main():
 
     total = 0
     for tier in tiers:
-        sids = [sprite_id(mon['sets'][0]['species']) for mon in data[tier].values()]
-        print('Checking sprites for {}...'.format(tier))
-        sprite_urls = check_sprites(sids)
         for slug, mon_data in data[tier].items():
             species = mon_data['sets'][0]['species']
-            html    = make_html(species, mon_data['sets'], tier, sprite_urls)
+            html    = make_html(species, mon_data['sets'], tier)
             rel     = os.path.join('gen8', 'battle-factory', tier, slug, 'index.html')
             full    = os.path.join(output_dir, rel)
             os.makedirs(os.path.dirname(full), exist_ok=True)

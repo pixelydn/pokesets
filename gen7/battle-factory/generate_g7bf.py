@@ -268,7 +268,7 @@ def item_html(items):
     parts = []
     for it in cleaned:
         src = ITEM_BASE + '/' + item_id(it) + '.png'
-        icon = '<img class="item-icon" src="' + src + '" alt="">'
+        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=&apos;none&apos;" alt="">'
         parts.append(icon + esc(it))
     return ' / '.join(parts)
 
@@ -289,6 +289,7 @@ def make_html(species, sets, tier):
     sid         = sprite_id(species)
     front_url   = '{}/gen5ani/{}.gif'.format(SPRITE_BASE, sid)
     back_url    = '{}/gen5ani-back/{}.gif'.format(SPRITE_BASE, sid)
+    static_url  = '{}/gen5/{}.png'.format(SPRITE_BASE, sid)
 
     sprite_tag = (
         '<img class="sprite"'
@@ -297,8 +298,10 @@ def make_html(species, sets, tier):
         ' data-back="{back}"'
         ' onmouseover="this.src=this.dataset.back"'
         ' onmouseout="this.src=this.dataset.front"'
+        ' onerror="this.onerror=null;this.src=\'{static}\';'
+        'this.onmouseover=null;this.onmouseout=null"'
         ' alt="{name}">'
-    ).format(front=front_url, back=back_url, name=esc(species))
+    ).format(front=front_url, back=back_url, static=static_url, name=esc(species))
 
     cards = ''
     for s in sets:
