@@ -225,13 +225,20 @@ NATURE_MOD = {
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
+SPRITE_ID_EXCEPTIONS = {
+    'ho-oh':               'hooh',
+    'zygarde-10%':         'zygarde10',
+    'necrozma-dusk-mane':  'necrozma-duskmane',
+    'necrozma-dawn-wings': 'necrozma-dawnwings',
+}
+
 def sprite_id(species):
     s = species.lower().replace(' ','').replace('.','').replace(':','').replace("'",'')
     if s.endswith('-o'): s = s[:-2]+'o'
-    return s
+    return SPRITE_ID_EXCEPTIONS.get(s, s)
 
 def item_id(name):
-    return re.sub(r'[^a-z0-9]', '', name.lower())
+    return re.sub(r'[^a-z0-9-]', '', name.lower().replace(' ', '-'))
 
 def fmt_list(arr):
     cleaned = [x for x in arr if x != '']
@@ -271,8 +278,11 @@ def item_html(items):
         return '\u2014'
     parts = []
     for it in cleaned:
+        if it.endswith(' Z'):
+            parts.append(esc(it))
+            continue
         src = ITEM_BASE + '/' + item_id(it) + '.png'
-        icon = '<img class="item-icon" src="' + src + '" onerror="this.style.display=&apos;none&apos;" alt="">'
+        icon = '<img class="item-icon" src="' + src + '" alt="">'
         parts.append(icon + esc(it))
     return ' / '.join(parts)
 
@@ -303,19 +313,29 @@ def tera_type_pills(tera_types, wants_tera):
 
 def make_html(species, sets, tier, mon_weight_pct):
     sid        = sprite_id(species)
-    front_url  = '{}/gen5ani/{}.gif'.format(SPRITE_BASE, sid)
-    back_url   = '{}/gen5ani-back/{}.gif'.format(SPRITE_BASE, sid)
-    static_url = '{}/gen5/{}.png'.format(SPRITE_BASE, sid)
+    front_url   = '{}/ani/{}.gif'.format(SPRITE_BASE, sid)
+    back_url    = '{}/ani-back/{}.gif'.format(SPRITE_BASE, sid)
+    static_url  = '{}/gen5/{}.png'.format(SPRITE_BASE, sid)
 
     sprite_tag = (
-        '<img class="sprite"'
-        ' src="{front}" data-front="{front}" data-back="{back}"'
-        ' onmouseover="this.src=this.dataset.back"'
-        ' onmouseout="this.src=this.dataset.front"'
-        ' onerror="this.onerror=null;this.src=\'{static}\';'
-        'this.onmouseover=null;this.onmouseout=null"'
+        '<img class="sprite" id="main-sprite"'
+        ' src="{front}"'
+        ' data-front="{front}"'
+        ' data-back="{back}"'
+        ' data-static="{static}"'
+        ' onmouseover="if(!window.staticMode)this.src=this.dataset.back"'
+        ' onmouseout="if(!window.staticMode)this.src=this.dataset.front"'
         ' alt="{name}">'
     ).format(front=front_url, back=back_url, static=static_url, name=esc(species))
+
+    toggle_btn = (
+        '<button class="sprite-toggle" onclick="'
+        "var img=document.getElementById('main-sprite');"
+        'window.staticMode=!window.staticMode;'
+        "img.src=window.staticMode?img.dataset.static:img.dataset.front;"
+        "this.textContent=window.staticMode?'GIF':'PNG'"
+        '">PNG</button>'
+    )
 
     cards = ''
     for s in sets:
@@ -388,6 +408,7 @@ def make_html(species, sets, tier, mon_weight_pct):
         '  <a class="back-link" href="../">\u2190 {}</a>'.format(esc(tier)),
         '  <div class="page-header">',
         '    {}'.format(sprite_tag),
+        '    {}'.format(toggle_btn),
         '    <div class="name-block">',
         '      <h1>{}</h1>'.format(esc(species)),
         '      {}'.format(type_badges_html(sid)),

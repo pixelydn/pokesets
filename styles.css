@@ -165,6 +165,25 @@ body {
   /*text-transform: uppercase;*/
 }
 
+/* Sprite Toggle Stuff */
+.g7bf .sprite-toggle,
+.g8bf .sprite-toggle,
+.g9bf .sprite-toggle {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  display: block;
+}
+.g7bf .sprite-toggle:hover,
+.g8bf .sprite-toggle:hover,
+.g9bf .sprite-toggle:hover { color: var(--accent); border-color: var(--accent); }
+
 /* ============================================================
    Gen 7 + Gen 8 Battle Factory
    ============================================================ */

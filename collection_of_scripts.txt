@@ -1,0 +1,23 @@
+python generate_cards.py gen7/battle-factory/factory-sets.json 7 Uber
+python generate_cards.py gen7/battle-factory/factory-sets.json 7 OU
+python generate_cards.py gen7/battle-factory/factory-sets.json 7 UU
+python generate_cards.py gen7/battle-factory/factory-sets.json 7 RU
+python generate_cards.py gen7/battle-factory/factory-sets.json 7 NU
+python generate_cards.py gen7/battle-factory/factory-sets.json 7 PU
+python generate_cards.py gen7/battle-factory/factory-sets.json 7 LC
+python generate_cards.py gen7/battle-factory/factory-sets.json 7 Mono
+
+python generate_cards.py gen8/battle-factory/factory-sets.json 8 Uber
+python generate_cards.py gen8/battle-factory/factory-sets.json 8 OU
+python generate_cards.py gen8/battle-factory/factory-sets.json 8 UU
+python generate_cards.py gen8/battle-factory/factory-sets.json 8 RU
+python generate_cards.py gen8/battle-factory/factory-sets.json 8 NU
+python generate_cards.py gen8/battle-factory/factory-sets.json 8 PU
+python generate_cards.py gen8/battle-factory/factory-sets.json 8 LC
+
+python generate_cards.py gen9/battle-factory/factory-sets.json 9 Uber
+python generate_cards.py gen9/battle-factory/factory-sets.json 9 OU
+python generate_cards.py gen9/battle-factory/factory-sets.json 9 UU
+python generate_cards.py gen9/battle-factory/factory-sets.json 9 RU
+python generate_cards.py gen9/battle-factory/factory-sets.json 9 NU
+python generate_cards.py gen9/battle-factory/factory-sets.json 9 PU
