@@ -167,9 +167,10 @@ body {
 
 /* Sprite Toggle Stuff */
 .sprite-toggle {
-  position: fixed;
-  top: 4rem;
-  left: 2rem;
+  position: sticky;
+  display: block;
+  top: 10px;
+  z-index: 100;
   background: var(--surface2);
   border: 1px solid var(--border);
   color: var(--text-dim);
