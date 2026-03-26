@@ -1,31 +1,43 @@
 """
-Generates mon-card HTML snippets for a tier index page.
-Prints to stdout — pipe or paste into your mon-grid div.
+Generates a tier index page with mon cards.
+Outputs to gen{N}/battle-factory/{tier}/index.html
 
 Usage:
-    python generate_cards.py <factory-sets.json> <tier>
+    python generate_cards.py <factory-sets.json> <gen> <tier>
 
 Examples:
-    python generate_cards.py factory-sets.json OU
-    python generate_cards.py factory-sets.json Uber
+    python generate_cards.py gen7/battle-factory/factory-sets.json 7 OU
+    python generate_cards.py gen9/battle-factory/factory-sets.json 9 Uber
 """
 
 import json, sys, re, os
 
-SPRITE = 'https://play.pokemonshowdown.com/sprites'
+SPRITE   = 'https://play.pokemonshowdown.com/sprites'
+ITEM_BASE = 'https://play.pokemonshowdown.com/sprites/itemicons'
+
+TIER_DISPLAY = {
+    'LC':   'Little Cup',
+    'Mono': 'Monotype',
+}
+
+SPRITE_ID_EXCEPTIONS = {
+    'ho-oh':               'hooh',
+    'zygarde-10%':         'zygarde10',
+    'necrozma-dusk-mane':  'necrozma-duskmane',
+    'necrozma-dawn-wings': 'necrozma-dawnwings',
+}
 
 TYPES = {
     'abomasnow':['Grass','Ice'],'abra':['Psychic'],'absol':['Dark'],
     'accelgor':['Bug'],'aegislash':['Steel','Ghost'],'aerodactyl':['Rock','Flying'],
     'aggron':['Steel','Rock'],'alakazam':['Psychic'],'alomomola':['Water'],
-    'amaura': ['Rock', 'Ice'],
-    'altaria':['Dragon','Flying'],'ambipom':['Normal'],'amoonguss':['Grass','Poison'],
-    'ampharos':['Electric'],'anorith':['Rock','Bug'],'araquanid':['Water','Bug'],
-    'arcanine':['Fire'],'arceus':['Normal'],'arceus-dark':['Dark'],
-    'arceus-dragon':['Dragon'],'arceus-electric':['Electric'],'arceus-fairy':['Fairy'],
-    'arceus-flying':['Flying'],'arceus-ghost':['Ghost'],'arceus-grass':['Grass'],
-    'arceus-ground':['Ground'],'arceus-poison':['Poison'],'arceus-rock':['Rock'],
-    'arceus-steel':['Steel'],'arceus-water':['Water'],
+    'amaura':['Rock','Ice'],'altaria':['Dragon','Flying'],'ambipom':['Normal'],
+    'amoonguss':['Grass','Poison'],'ampharos':['Electric'],'anorith':['Rock','Bug'],
+    'araquanid':['Water','Bug'],'arcanine':['Fire'],'arceus':['Normal'],
+    'arceus-dark':['Dark'],'arceus-dragon':['Dragon'],'arceus-electric':['Electric'],
+    'arceus-fairy':['Fairy'],'arceus-flying':['Flying'],'arceus-ghost':['Ghost'],
+    'arceus-grass':['Grass'],'arceus-ground':['Ground'],'arceus-poison':['Poison'],
+    'arceus-rock':['Rock'],'arceus-steel':['Steel'],'arceus-water':['Water'],
     'archen':['Rock','Flying'],'archeops':['Rock','Flying'],'arctovish':['Water','Ice'],
     'armarouge':['Fire','Psychic'],'armaldo':['Rock','Bug'],'aromatisse':['Fairy'],
     'articuno':['Ice','Flying'],'articuno-galar':['Psychic','Flying'],
@@ -39,9 +51,7 @@ TYPES = {
     'brambleghast':['Grass','Ghost'],'braviary':['Normal','Flying'],
     'braviary-hisui':['Psychic','Flying'],'breloom':['Grass','Fighting'],
     'bronzong':['Steel','Psychic'],'bruxish':['Water','Psychic'],
-    'bulbasaur': ['Grass', 'Poison'],
-    'buneary': ['Normal'],
-    'bunnelby': ['Normal'],
+    'bulbasaur':['Grass','Poison'],'buneary':['Normal'],'bunnelby':['Normal'],
     'buzzwole':['Bug','Fighting'],
     'cacturne':['Grass','Dark'],'calyrex-ice':['Psychic','Ice'],
     'calyrex-shadow':['Psychic','Ghost'],'camerupt':['Fire','Ground'],
@@ -94,8 +104,8 @@ TYPES = {
     'gothitelle':['Psychic'],'gourgeist':['Ghost','Grass'],'gourgeist-small':['Ghost','Grass'],
     'gourgeist-super':['Ghost','Grass'],'granbull':['Fairy'],
     'greattusk':['Ground','Fighting'],'greninja':['Water','Dark'],
-    'greninja-bond':['Water','Dark'],'grimmsnarl':['Dark','Fairy'],'groudon':['Ground'],
-    'grimer-alola': ['Poison', 'Dark'],
+    'greninja-bond':['Water','Dark'],'grimer-alola':['Poison','Dark'],
+    'grimmsnarl':['Dark','Fairy'],'groudon':['Ground'],
     'gurdurr':['Fighting'],'guzzlord':['Dark','Dragon'],'gyarados':['Water','Flying'],
     'hariyama':['Fighting'],'hatterene':['Psychic','Fairy'],'hattrem':['Psychic'],
     'haunter':['Ghost','Poison'],'hawlucha':['Fighting','Flying'],'haxorus':['Dragon'],
@@ -236,8 +246,6 @@ TYPES = {
     'zygarde':['Dragon','Ground'],'zygarde-10%':['Dragon','Ground'],
 }
 
-SPRITE_ID_EXCEPTIONS = {'porygon-z': 'porygonz'}
-
 def sprite_id(species):
     s = species.lower().replace(' ','').replace('.','').replace(':','').replace("'",'')
     if s.endswith('-o'):
@@ -245,10 +253,12 @@ def sprite_id(species):
     return SPRITE_ID_EXCEPTIONS.get(s, s)
 
 def make_card(slug, species):
-    sid   = sprite_id(species)
-    front = SPRITE + '/ani/' + sid + '.gif'
-    back  = SPRITE + '/ani-back/' + sid + '.gif'
-    name  = species.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+    sid          = sprite_id(species)
+    front        = SPRITE + '/ani/' + sid + '.gif'
+    back         = SPRITE + '/ani-back/' + sid + '.gif'
+    static_front = SPRITE + '/gen5/' + sid + '.png'
+    static_back  = SPRITE + '/gen5-back/' + sid + '.png'
+    name         = species.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;')
     badges = ''.join(
         '<span class="type-badge type-{t}">{T}</span>'.format(t=t.lower(), T=t.upper())
         for t in TYPES.get(sid, [])
@@ -259,41 +269,38 @@ def make_card(slug, species):
         '    src="{front}"\n'
         '    data-front="{front}"\n'
         '    data-back="{back}"\n'
-        '    onmouseover="this.src=this.dataset.back"\n'
-        '    onmouseout="this.src=this.dataset.front"\n'
+        '    data-static-front="{sf}"\n'
+        '    data-static-back="{sb}"\n'
+        '    onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back"\n'
+        '    onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front"\n'
         '    alt="{name}">\n'
         '  <div class="mon-info">\n'
         '    <span class="mon-name">{name}</span>\n'
         '    <div class="mon-types">{badges}</div>\n'
         '  </div>\n'
         '</a>'
-    ).format(slug=slug, name=name, front=front, back=back, badges=badges)
+    ).format(slug=slug, name=name, front=front, back=back,
+             sf=static_front, sb=static_back, badges=badges)
 
-
-TIER_DISPLAY = {
-    'LC':   'Little Cup',
-    'Mono': 'Monotype',
-}
 
 def make_page(tier, gen, cards_html):
     body_class   = 'g{}bf'.format(gen)
-    css_depth    = '../../../styles.css'
     display_name = TIER_DISPLAY.get(tier, tier)
-    # LC gets a <br> between tier name and "Pokémon Sets", others don't
-    h1_content   = '{}<br>Pok&eacute;mon Sets'.format(display_name) if tier == 'LC' else '{} Pok&eacute;mon Sets'.format(display_name)
+    h1 = '{}<br>Pok&eacute;mon Sets'.format(display_name) if tier == 'LC' else '{} Pok&eacute;mon Sets'.format(display_name)
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{tier} - Gen {gen} Battle Factory</title>
-  <link rel="stylesheet" href="{css}">
+  <title>{dn} - Gen {gen} Battle Factory</title>
+  <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body class="{cls}">
   <a class="back-link" href="../">&larr; Gen {gen} Battle Factory Tiers</a>
   <a class="showdown-link" href="https://play.pokemonshowdown.com">Play this format on<br><br>
     <img src="https://play.pokemonshowdown.com/pokemonshowdown.png">
   </a>
+  <button class="sprite-toggle" onclick="window.staticMode=!window.staticMode;document.querySelectorAll('.mon-sprite').forEach(function(img){{img.src=window.staticMode?img.dataset.staticFront:img.dataset.front;}});this.textContent=window.staticMode?'GIF':'PNG';">PNG</button>
   <div class="index-header">
     <h1 class="index-title">{h1}</h1>
     <p class="index-sub">Gen {gen} Battle Factory</p>
@@ -315,13 +322,12 @@ def make_page(tier, gen, cards_html):
     }});
   </script>
 </body>
-</html>""".format(tier=display_name, gen=gen, css=css_depth, cls=body_class, h1=h1_content, cards=cards_html)
+</html>""".format(dn=display_name, gen=gen, cls=body_class, h1=h1, cards=cards_html)
 
 
 def main():
     if len(sys.argv) < 4:
-        print('Usage: python generate_cards.py <factory-sets.json> <gen> <tier>')
-        print('Example: python generate_cards.py factory-sets.json 7 OU')
+        print(__doc__)
         sys.exit(1)
 
     json_path = sys.argv[1]
@@ -342,7 +348,6 @@ def main():
     cards_html = '\n'.join('    ' + make_card(slug, species) for slug, species in mons)
     html = make_page(tier, gen, cards_html)
 
-    import os
     out_path = os.path.join('gen{}'.format(gen), 'battle-factory', tier, 'index.html')
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     open(out_path, 'w', encoding='utf-8').write(html)

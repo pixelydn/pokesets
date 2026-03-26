@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UU - Gen 7 Battle Factory</title>
   <link rel="stylesheet" href="../../../styles.css">
 </head>
+
 <body class="g7bf">
   <a class="back-link" href="../">&larr; Gen 7 Battle Factory Tiers</a>
   <a class="showdown-link" href="https://play.pokemonshowdown.com">Play this format on<br><br>
     <img src="https://play.pokemonshowdown.com/pokemonshowdown.png">
   </a>
+  <button class="sprite-toggle" onclick="window.staticMode=!window.staticMode;document.querySelectorAll('.mon-sprite').forEach(function(img){img.src=window.staticMode?img.dataset.staticFront:img.dataset.front;});this.textContent=window.staticMode?'GIF':'PNG';">PNG</button>
   <div class="index-header">
     <h1 class="index-title">UU Pok&eacute;mon Sets</h1>
     <p class="index-sub">Gen 7 Battle Factory</p>
@@ -19,1238 +22,675 @@
   <br>
   <div class="mon-grid">
     <a class="mon-card" href="absol/" data-name="Absol">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/absol.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/absol.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/absol.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Absol">
-  <div class="mon-info">
-    <span class="mon-name">Absol</span>
-    <div class="mon-types"><span class="type-badge type-dark">DARK</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/absol.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/absol.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/absol.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/absol.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/absol.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Absol">
+      <div class="mon-info">
+        <span class="mon-name">Absol</span>
+        <div class="mon-types"><span class="type-badge type-dark">DARK</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="aerodactyl/" data-name="Aerodactyl">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/aerodactyl.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/aerodactyl.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/aerodactyl.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Aerodactyl">
-  <div class="mon-info">
-    <span class="mon-name">Aerodactyl</span>
-    <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/aerodactyl.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/aerodactyl.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/aerodactyl.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/aerodactyl.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/aerodactyl.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Aerodactyl">
+      <div class="mon-info">
+        <span class="mon-name">Aerodactyl</span>
+        <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="aggron/" data-name="Aggron">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/aggron.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/aggron.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/aggron.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Aggron">
-  <div class="mon-info">
-    <span class="mon-name">Aggron</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-rock">ROCK</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/aggron.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/aggron.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/aggron.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/aggron.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/aggron.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Aggron">
+      <div class="mon-info">
+        <span class="mon-name">Aggron</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-rock">ROCK</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="alomomola/" data-name="Alomomola">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/alomomola.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/alomomola.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/alomomola.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Alomomola">
-  <div class="mon-info">
-    <span class="mon-name">Alomomola</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/alomomola.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/alomomola.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/alomomola.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/alomomola.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/alomomola.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Alomomola">
+      <div class="mon-info">
+        <span class="mon-name">Alomomola</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="altaria/" data-name="Altaria">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/altaria.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/altaria.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/altaria.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Altaria">
-  <div class="mon-info">
-    <span class="mon-name">Altaria</span>
-    <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/altaria.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/altaria.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/altaria.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/altaria.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/altaria.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Altaria">
+      <div class="mon-info">
+        <span class="mon-name">Altaria</span>
+        <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="amoonguss/" data-name="Amoonguss">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/amoonguss.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/amoonguss.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/amoonguss.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Amoonguss">
-  <div class="mon-info">
-    <span class="mon-name">Amoonguss</span>
-    <div class="mon-types"><span class="type-badge type-grass">GRASS</span><span class="type-badge type-poison">POISON</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/amoonguss.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/amoonguss.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/amoonguss.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/amoonguss.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/amoonguss.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Amoonguss">
+      <div class="mon-info">
+        <span class="mon-name">Amoonguss</span>
+        <div class="mon-types"><span class="type-badge type-grass">GRASS</span><span class="type-badge type-poison">POISON</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="araquanid/" data-name="Araquanid">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/araquanid.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/araquanid.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/araquanid.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Araquanid">
-  <div class="mon-info">
-    <span class="mon-name">Araquanid</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-bug">BUG</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/araquanid.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/araquanid.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/araquanid.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/araquanid.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/araquanid.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Araquanid">
+      <div class="mon-info">
+        <span class="mon-name">Araquanid</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-bug">BUG</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="azelf/" data-name="Azelf">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/azelf.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/azelf.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/azelf.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Azelf">
-  <div class="mon-info">
-    <span class="mon-name">Azelf</span>
-    <div class="mon-types"><span class="type-badge type-psychic">PSYCHIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/azelf.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/azelf.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/azelf.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/azelf.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/azelf.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Azelf">
+      <div class="mon-info">
+        <span class="mon-name">Azelf</span>
+        <div class="mon-types"><span class="type-badge type-psychic">PSYCHIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="barbaracle/" data-name="Barbaracle">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/barbaracle.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/barbaracle.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/barbaracle.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Barbaracle">
-  <div class="mon-info">
-    <span class="mon-name">Barbaracle</span>
-    <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-water">WATER</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/barbaracle.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/barbaracle.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/barbaracle.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/barbaracle.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/barbaracle.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Barbaracle">
+      <div class="mon-info">
+        <span class="mon-name">Barbaracle</span>
+        <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-water">WATER</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="beedrill/" data-name="Beedrill">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/beedrill.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/beedrill.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/beedrill.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Beedrill">
-  <div class="mon-info">
-    <span class="mon-name">Beedrill</span>
-    <div class="mon-types"><span class="type-badge type-bug">BUG</span><span class="type-badge type-poison">POISON</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/beedrill.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/beedrill.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/beedrill.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/beedrill.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/beedrill.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Beedrill">
+      <div class="mon-info">
+        <span class="mon-name">Beedrill</span>
+        <div class="mon-types"><span class="type-badge type-bug">BUG</span><span class="type-badge type-poison">POISON</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="bewear/" data-name="Bewear">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/bewear.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/bewear.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/bewear.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Bewear">
-  <div class="mon-info">
-    <span class="mon-name">Bewear</span>
-    <div class="mon-types"><span class="type-badge type-normal">NORMAL</span><span class="type-badge type-fighting">FIGHTING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/bewear.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/bewear.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/bewear.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/bewear.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/bewear.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Bewear">
+      <div class="mon-info">
+        <span class="mon-name">Bewear</span>
+        <div class="mon-types"><span class="type-badge type-normal">NORMAL</span><span class="type-badge type-fighting">FIGHTING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="bisharp/" data-name="Bisharp">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/bisharp.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/bisharp.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/bisharp.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Bisharp">
-  <div class="mon-info">
-    <span class="mon-name">Bisharp</span>
-    <div class="mon-types"><span class="type-badge type-dark">DARK</span><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/bisharp.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/bisharp.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/bisharp.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/bisharp.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/bisharp.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Bisharp">
+      <div class="mon-info">
+        <span class="mon-name">Bisharp</span>
+        <div class="mon-types"><span class="type-badge type-dark">DARK</span><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="blastoise/" data-name="Blastoise">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/blastoise.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/blastoise.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/blastoise.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Blastoise">
-  <div class="mon-info">
-    <span class="mon-name">Blastoise</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/blastoise.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/blastoise.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/blastoise.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/blastoise.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/blastoise.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Blastoise">
+      <div class="mon-info">
+        <span class="mon-name">Blastoise</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="blissey/" data-name="Blissey">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/blissey.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/blissey.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/blissey.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Blissey">
-  <div class="mon-info">
-    <span class="mon-name">Blissey</span>
-    <div class="mon-types"><span class="type-badge type-normal">NORMAL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/blissey.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/blissey.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/blissey.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/blissey.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/blissey.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Blissey">
+      <div class="mon-info">
+        <span class="mon-name">Blissey</span>
+        <div class="mon-types"><span class="type-badge type-normal">NORMAL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="bronzong/" data-name="Bronzong">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/bronzong.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/bronzong.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/bronzong.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Bronzong">
-  <div class="mon-info">
-    <span class="mon-name">Bronzong</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-psychic">PSYCHIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/bronzong.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/bronzong.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/bronzong.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/bronzong.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/bronzong.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Bronzong">
+      <div class="mon-info">
+        <span class="mon-name">Bronzong</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-psychic">PSYCHIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="celebi/" data-name="Celebi">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/celebi.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/celebi.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/celebi.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Celebi">
-  <div class="mon-info">
-    <span class="mon-name">Celebi</span>
-    <div class="mon-types"><span class="type-badge type-psychic">PSYCHIC</span><span class="type-badge type-grass">GRASS</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/celebi.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/celebi.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/celebi.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/celebi.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/celebi.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Celebi">
+      <div class="mon-info">
+        <span class="mon-name">Celebi</span>
+        <div class="mon-types"><span class="type-badge type-psychic">PSYCHIC</span><span class="type-badge type-grass">GRASS</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="chandelure/" data-name="Chandelure">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/chandelure.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/chandelure.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/chandelure.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Chandelure">
-  <div class="mon-info">
-    <span class="mon-name">Chandelure</span>
-    <div class="mon-types"><span class="type-badge type-ghost">GHOST</span><span class="type-badge type-fire">FIRE</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/chandelure.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/chandelure.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/chandelure.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/chandelure.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/chandelure.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Chandelure">
+      <div class="mon-info">
+        <span class="mon-name">Chandelure</span>
+        <div class="mon-types"><span class="type-badge type-ghost">GHOST</span><span class="type-badge type-fire">FIRE</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="chesnaught/" data-name="Chesnaught">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/chesnaught.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/chesnaught.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/chesnaught.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Chesnaught">
-  <div class="mon-info">
-    <span class="mon-name">Chesnaught</span>
-    <div class="mon-types"><span class="type-badge type-grass">GRASS</span><span class="type-badge type-fighting">FIGHTING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/chesnaught.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/chesnaught.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/chesnaught.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/chesnaught.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/chesnaught.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Chesnaught">
+      <div class="mon-info">
+        <span class="mon-name">Chesnaught</span>
+        <div class="mon-types"><span class="type-badge type-grass">GRASS</span><span class="type-badge type-fighting">FIGHTING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="cobalion/" data-name="Cobalion">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/cobalion.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/cobalion.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/cobalion.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Cobalion">
-  <div class="mon-info">
-    <span class="mon-name">Cobalion</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-fighting">FIGHTING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/cobalion.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/cobalion.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/cobalion.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/cobalion.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/cobalion.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Cobalion">
+      <div class="mon-info">
+        <span class="mon-name">Cobalion</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-fighting">FIGHTING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="cofagrigus/" data-name="Cofagrigus">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/cofagrigus.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/cofagrigus.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/cofagrigus.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Cofagrigus">
-  <div class="mon-info">
-    <span class="mon-name">Cofagrigus</span>
-    <div class="mon-types"><span class="type-badge type-ghost">GHOST</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/cofagrigus.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/cofagrigus.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/cofagrigus.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/cofagrigus.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/cofagrigus.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Cofagrigus">
+      <div class="mon-info">
+        <span class="mon-name">Cofagrigus</span>
+        <div class="mon-types"><span class="type-badge type-ghost">GHOST</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="crawdaunt/" data-name="Crawdaunt">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/crawdaunt.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/crawdaunt.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/crawdaunt.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Crawdaunt">
-  <div class="mon-info">
-    <span class="mon-name">Crawdaunt</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-dark">DARK</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/crawdaunt.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/crawdaunt.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/crawdaunt.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/crawdaunt.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/crawdaunt.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Crawdaunt">
+      <div class="mon-info">
+        <span class="mon-name">Crawdaunt</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-dark">DARK</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="crobat/" data-name="Crobat">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/crobat.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/crobat.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/crobat.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Crobat">
-  <div class="mon-info">
-    <span class="mon-name">Crobat</span>
-    <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/crobat.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/crobat.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/crobat.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/crobat.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/crobat.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Crobat">
+      <div class="mon-info">
+        <span class="mon-name">Crobat</span>
+        <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="decidueye/" data-name="Decidueye">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/decidueye.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/decidueye.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/decidueye.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Decidueye">
-  <div class="mon-info">
-    <span class="mon-name">Decidueye</span>
-    <div class="mon-types"><span class="type-badge type-grass">GRASS</span><span class="type-badge type-ghost">GHOST</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/decidueye.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/decidueye.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/decidueye.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/decidueye.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/decidueye.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Decidueye">
+      <div class="mon-info">
+        <span class="mon-name">Decidueye</span>
+        <div class="mon-types"><span class="type-badge type-grass">GRASS</span><span class="type-badge type-ghost">GHOST</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="diancie/" data-name="Diancie">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/diancie.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/diancie.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/diancie.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Diancie">
-  <div class="mon-info">
-    <span class="mon-name">Diancie</span>
-    <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-fairy">FAIRY</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/diancie.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/diancie.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/diancie.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/diancie.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/diancie.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Diancie">
+      <div class="mon-info">
+        <span class="mon-name">Diancie</span>
+        <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-fairy">FAIRY</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="doublade/" data-name="Doublade">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/doublade.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/doublade.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/doublade.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Doublade">
-  <div class="mon-info">
-    <span class="mon-name">Doublade</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-ghost">GHOST</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/doublade.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/doublade.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/doublade.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/doublade.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/doublade.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Doublade">
+      <div class="mon-info">
+        <span class="mon-name">Doublade</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-ghost">GHOST</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="durant/" data-name="Durant">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/durant.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/durant.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/durant.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Durant">
-  <div class="mon-info">
-    <span class="mon-name">Durant</span>
-    <div class="mon-types"><span class="type-badge type-bug">BUG</span><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/durant.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/durant.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/durant.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/durant.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/durant.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Durant">
+      <div class="mon-info">
+        <span class="mon-name">Durant</span>
+        <div class="mon-types"><span class="type-badge type-bug">BUG</span><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="empoleon/" data-name="Empoleon">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/empoleon.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/empoleon.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/empoleon.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Empoleon">
-  <div class="mon-info">
-    <span class="mon-name">Empoleon</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/empoleon.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/empoleon.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/empoleon.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/empoleon.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/empoleon.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Empoleon">
+      <div class="mon-info">
+        <span class="mon-name">Empoleon</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="feraligatr/" data-name="Feraligatr">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/feraligatr.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/feraligatr.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/feraligatr.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Feraligatr">
-  <div class="mon-info">
-    <span class="mon-name">Feraligatr</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/feraligatr.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/feraligatr.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/feraligatr.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/feraligatr.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/feraligatr.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Feraligatr">
+      <div class="mon-info">
+        <span class="mon-name">Feraligatr</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="florges/" data-name="Florges">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/florges.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/florges.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/florges.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Florges">
-  <div class="mon-info">
-    <span class="mon-name">Florges</span>
-    <div class="mon-types"><span class="type-badge type-fairy">FAIRY</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/florges.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/florges.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/florges.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/florges.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/florges.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Florges">
+      <div class="mon-info">
+        <span class="mon-name">Florges</span>
+        <div class="mon-types"><span class="type-badge type-fairy">FAIRY</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="froslass/" data-name="Froslass">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/froslass.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/froslass.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/froslass.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Froslass">
-  <div class="mon-info">
-    <span class="mon-name">Froslass</span>
-    <div class="mon-types"><span class="type-badge type-ice">ICE</span><span class="type-badge type-ghost">GHOST</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/froslass.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/froslass.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/froslass.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/froslass.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/froslass.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Froslass">
+      <div class="mon-info">
+        <span class="mon-name">Froslass</span>
+        <div class="mon-types"><span class="type-badge type-ice">ICE</span><span class="type-badge type-ghost">GHOST</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="gastrodon/" data-name="Gastrodon">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/gastrodon.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/gastrodon.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/gastrodon.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Gastrodon">
-  <div class="mon-info">
-    <span class="mon-name">Gastrodon</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/gastrodon.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/gastrodon.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/gastrodon.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/gastrodon.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/gastrodon.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Gastrodon">
+      <div class="mon-info">
+        <span class="mon-name">Gastrodon</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="gligar/" data-name="Gligar">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/gligar.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/gligar.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/gligar.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Gligar">
-  <div class="mon-info">
-    <span class="mon-name">Gligar</span>
-    <div class="mon-types"><span class="type-badge type-ground">GROUND</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/gligar.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/gligar.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/gligar.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/gligar.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/gligar.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Gligar">
+      <div class="mon-info">
+        <span class="mon-name">Gligar</span>
+        <div class="mon-types"><span class="type-badge type-ground">GROUND</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="haxorus/" data-name="Haxorus">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/haxorus.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/haxorus.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/haxorus.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Haxorus">
-  <div class="mon-info">
-    <span class="mon-name">Haxorus</span>
-    <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/haxorus.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/haxorus.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/haxorus.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/haxorus.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/haxorus.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Haxorus">
+      <div class="mon-info">
+        <span class="mon-name">Haxorus</span>
+        <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="heracross/" data-name="Heracross">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/heracross.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/heracross.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/heracross.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Heracross">
-  <div class="mon-info">
-    <span class="mon-name">Heracross</span>
-    <div class="mon-types"><span class="type-badge type-bug">BUG</span><span class="type-badge type-fighting">FIGHTING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/heracross.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/heracross.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/heracross.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/heracross.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/heracross.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Heracross">
+      <div class="mon-info">
+        <span class="mon-name">Heracross</span>
+        <div class="mon-types"><span class="type-badge type-bug">BUG</span><span class="type-badge type-fighting">FIGHTING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="hippowdon/" data-name="Hippowdon">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/hippowdon.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/hippowdon.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/hippowdon.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Hippowdon">
-  <div class="mon-info">
-    <span class="mon-name">Hippowdon</span>
-    <div class="mon-types"><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/hippowdon.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/hippowdon.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/hippowdon.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/hippowdon.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/hippowdon.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Hippowdon">
+      <div class="mon-info">
+        <span class="mon-name">Hippowdon</span>
+        <div class="mon-types"><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="houndoom/" data-name="Houndoom">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/houndoom.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/houndoom.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/houndoom.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Houndoom">
-  <div class="mon-info">
-    <span class="mon-name">Houndoom</span>
-    <div class="mon-types"><span class="type-badge type-dark">DARK</span><span class="type-badge type-fire">FIRE</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/houndoom.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/houndoom.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/houndoom.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/houndoom.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/houndoom.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Houndoom">
+      <div class="mon-info">
+        <span class="mon-name">Houndoom</span>
+        <div class="mon-types"><span class="type-badge type-dark">DARK</span><span class="type-badge type-fire">FIRE</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="hydreigon/" data-name="Hydreigon">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/hydreigon.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/hydreigon.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/hydreigon.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Hydreigon">
-  <div class="mon-info">
-    <span class="mon-name">Hydreigon</span>
-    <div class="mon-types"><span class="type-badge type-dark">DARK</span><span class="type-badge type-dragon">DRAGON</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/hydreigon.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/hydreigon.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/hydreigon.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/hydreigon.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/hydreigon.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Hydreigon">
+      <div class="mon-info">
+        <span class="mon-name">Hydreigon</span>
+        <div class="mon-types"><span class="type-badge type-dark">DARK</span><span class="type-badge type-dragon">DRAGON</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="infernape/" data-name="Infernape">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/infernape.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/infernape.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/infernape.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Infernape">
-  <div class="mon-info">
-    <span class="mon-name">Infernape</span>
-    <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-fighting">FIGHTING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/infernape.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/infernape.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/infernape.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/infernape.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/infernape.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Infernape">
+      <div class="mon-info">
+        <span class="mon-name">Infernape</span>
+        <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-fighting">FIGHTING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="jellicent/" data-name="Jellicent">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/jellicent.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/jellicent.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/jellicent.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Jellicent">
-  <div class="mon-info">
-    <span class="mon-name">Jellicent</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-ghost">GHOST</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/jellicent.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/jellicent.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/jellicent.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/jellicent.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/jellicent.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Jellicent">
+      <div class="mon-info">
+        <span class="mon-name">Jellicent</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-ghost">GHOST</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="klefki/" data-name="Klefki">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/klefki.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/klefki.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/klefki.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Klefki">
-  <div class="mon-info">
-    <span class="mon-name">Klefki</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-fairy">FAIRY</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/klefki.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/klefki.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/klefki.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/klefki.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/klefki.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Klefki">
+      <div class="mon-info">
+        <span class="mon-name">Klefki</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-fairy">FAIRY</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="krookodile/" data-name="Krookodile">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/krookodile.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/krookodile.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/krookodile.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Krookodile">
-  <div class="mon-info">
-    <span class="mon-name">Krookodile</span>
-    <div class="mon-types"><span class="type-badge type-ground">GROUND</span><span class="type-badge type-dark">DARK</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/krookodile.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/krookodile.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/krookodile.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/krookodile.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/krookodile.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Krookodile">
+      <div class="mon-info">
+        <span class="mon-name">Krookodile</span>
+        <div class="mon-types"><span class="type-badge type-ground">GROUND</span><span class="type-badge type-dark">DARK</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="kyurem/" data-name="Kyurem">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/kyurem.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/kyurem.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/kyurem.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Kyurem">
-  <div class="mon-info">
-    <span class="mon-name">Kyurem</span>
-    <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span><span class="type-badge type-ice">ICE</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/kyurem.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/kyurem.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/kyurem.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/kyurem.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/kyurem.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Kyurem">
+      <div class="mon-info">
+        <span class="mon-name">Kyurem</span>
+        <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span><span class="type-badge type-ice">ICE</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="latias/" data-name="Latias">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/latias.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/latias.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/latias.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Latias">
-  <div class="mon-info">
-    <span class="mon-name">Latias</span>
-    <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span><span class="type-badge type-psychic">PSYCHIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/latias.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/latias.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/latias.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/latias.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/latias.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Latias">
+      <div class="mon-info">
+        <span class="mon-name">Latias</span>
+        <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span><span class="type-badge type-psychic">PSYCHIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="lucario/" data-name="Lucario">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/lucario.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/lucario.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/lucario.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Lucario">
-  <div class="mon-info">
-    <span class="mon-name">Lucario</span>
-    <div class="mon-types"><span class="type-badge type-fighting">FIGHTING</span><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/lucario.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/lucario.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/lucario.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/lucario.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/lucario.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Lucario">
+      <div class="mon-info">
+        <span class="mon-name">Lucario</span>
+        <div class="mon-types"><span class="type-badge type-fighting">FIGHTING</span><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="magneton/" data-name="Magneton">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/magneton.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/magneton.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/magneton.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Magneton">
-  <div class="mon-info">
-    <span class="mon-name">Magneton</span>
-    <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/magneton.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/magneton.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/magneton.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/magneton.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/magneton.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Magneton">
+      <div class="mon-info">
+        <span class="mon-name">Magneton</span>
+        <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="mamoswine/" data-name="Mamoswine">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/mamoswine.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/mamoswine.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/mamoswine.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Mamoswine">
-  <div class="mon-info">
-    <span class="mon-name">Mamoswine</span>
-    <div class="mon-types"><span class="type-badge type-ice">ICE</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/mamoswine.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/mamoswine.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/mamoswine.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/mamoswine.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/mamoswine.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Mamoswine">
+      <div class="mon-info">
+        <span class="mon-name">Mamoswine</span>
+        <div class="mon-types"><span class="type-badge type-ice">ICE</span><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="mandibuzz/" data-name="Mandibuzz">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/mandibuzz.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/mandibuzz.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/mandibuzz.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Mandibuzz">
-  <div class="mon-info">
-    <span class="mon-name">Mandibuzz</span>
-    <div class="mon-types"><span class="type-badge type-dark">DARK</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/mandibuzz.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/mandibuzz.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/mandibuzz.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/mandibuzz.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/mandibuzz.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Mandibuzz">
+      <div class="mon-info">
+        <span class="mon-name">Mandibuzz</span>
+        <div class="mon-types"><span class="type-badge type-dark">DARK</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="manectric/" data-name="Manectric">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/manectric.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/manectric.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/manectric.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Manectric">
-  <div class="mon-info">
-    <span class="mon-name">Manectric</span>
-    <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/manectric.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/manectric.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/manectric.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/manectric.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/manectric.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Manectric">
+      <div class="mon-info">
+        <span class="mon-name">Manectric</span>
+        <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="mantine/" data-name="Mantine">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/mantine.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/mantine.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/mantine.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Mantine">
-  <div class="mon-info">
-    <span class="mon-name">Mantine</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/mantine.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/mantine.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/mantine.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/mantine.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/mantine.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Mantine">
+      <div class="mon-info">
+        <span class="mon-name">Mantine</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="marowakalola/" data-name="Marowak-Alola">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/marowak-alola.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/marowak-alola.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/marowak-alola.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Marowak-Alola">
-  <div class="mon-info">
-    <span class="mon-name">Marowak-Alola</span>
-    <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-ghost">GHOST</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/marowak-alola.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/marowak-alola.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/marowak-alola.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/marowak-alola.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/marowak-alola.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Marowak-Alola">
+      <div class="mon-info">
+        <span class="mon-name">Marowak-Alola</span>
+        <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-ghost">GHOST</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="metagross/" data-name="Metagross">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/metagross.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/metagross.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/metagross.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Metagross">
-  <div class="mon-info">
-    <span class="mon-name">Metagross</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-psychic">PSYCHIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/metagross.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/metagross.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/metagross.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/metagross.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/metagross.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Metagross">
+      <div class="mon-info">
+        <span class="mon-name">Metagross</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-psychic">PSYCHIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="mienshao/" data-name="Mienshao">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/mienshao.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/mienshao.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/mienshao.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Mienshao">
-  <div class="mon-info">
-    <span class="mon-name">Mienshao</span>
-    <div class="mon-types"><span class="type-badge type-fighting">FIGHTING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/mienshao.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/mienshao.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/mienshao.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/mienshao.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/mienshao.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Mienshao">
+      <div class="mon-info">
+        <span class="mon-name">Mienshao</span>
+        <div class="mon-types"><span class="type-badge type-fighting">FIGHTING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="moltres/" data-name="Moltres">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/moltres.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/moltres.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/moltres.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Moltres">
-  <div class="mon-info">
-    <span class="mon-name">Moltres</span>
-    <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/moltres.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/moltres.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/moltres.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/moltres.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/moltres.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Moltres">
+      <div class="mon-info">
+        <span class="mon-name">Moltres</span>
+        <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="mukalola/" data-name="Muk-Alola">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/muk-alola.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/muk-alola.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/muk-alola.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Muk-Alola">
-  <div class="mon-info">
-    <span class="mon-name">Muk-Alola</span>
-    <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-dark">DARK</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/muk-alola.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/muk-alola.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/muk-alola.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/muk-alola.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/muk-alola.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Muk-Alola">
+      <div class="mon-info">
+        <span class="mon-name">Muk-Alola</span>
+        <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-dark">DARK</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="necrozma/" data-name="Necrozma">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/necrozma.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/necrozma.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/necrozma.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Necrozma">
-  <div class="mon-info">
-    <span class="mon-name">Necrozma</span>
-    <div class="mon-types"><span class="type-badge type-psychic">PSYCHIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/necrozma.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/necrozma.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/necrozma.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/necrozma.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/necrozma.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Necrozma">
+      <div class="mon-info">
+        <span class="mon-name">Necrozma</span>
+        <div class="mon-types"><span class="type-badge type-psychic">PSYCHIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="nidoking/" data-name="Nidoking">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/nidoking.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/nidoking.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/nidoking.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Nidoking">
-  <div class="mon-info">
-    <span class="mon-name">Nidoking</span>
-    <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/nidoking.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/nidoking.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/nidoking.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/nidoking.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/nidoking.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Nidoking">
+      <div class="mon-info">
+        <span class="mon-name">Nidoking</span>
+        <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="nidoqueen/" data-name="Nidoqueen">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/nidoqueen.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/nidoqueen.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/nidoqueen.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Nidoqueen">
-  <div class="mon-info">
-    <span class="mon-name">Nidoqueen</span>
-    <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/nidoqueen.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/nidoqueen.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/nidoqueen.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/nidoqueen.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/nidoqueen.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Nidoqueen">
+      <div class="mon-info">
+        <span class="mon-name">Nidoqueen</span>
+        <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="nihilego/" data-name="Nihilego">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/nihilego.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/nihilego.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/nihilego.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Nihilego">
-  <div class="mon-info">
-    <span class="mon-name">Nihilego</span>
-    <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-poison">POISON</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/nihilego.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/nihilego.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/nihilego.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/nihilego.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/nihilego.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Nihilego">
+      <div class="mon-info">
+        <span class="mon-name">Nihilego</span>
+        <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-poison">POISON</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="palossand/" data-name="Palossand">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/palossand.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/palossand.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/palossand.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Palossand">
-  <div class="mon-info">
-    <span class="mon-name">Palossand</span>
-    <div class="mon-types"><span class="type-badge type-ghost">GHOST</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/palossand.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/palossand.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/palossand.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/palossand.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/palossand.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Palossand">
+      <div class="mon-info">
+        <span class="mon-name">Palossand</span>
+        <div class="mon-types"><span class="type-badge type-ghost">GHOST</span><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="pidgeot/" data-name="Pidgeot">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/pidgeot.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/pidgeot.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/pidgeot.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Pidgeot">
-  <div class="mon-info">
-    <span class="mon-name">Pidgeot</span>
-    <div class="mon-types"><span class="type-badge type-normal">NORMAL</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/pidgeot.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/pidgeot.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/pidgeot.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/pidgeot.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/pidgeot.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Pidgeot">
+      <div class="mon-info">
+        <span class="mon-name">Pidgeot</span>
+        <div class="mon-types"><span class="type-badge type-normal">NORMAL</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="primarina/" data-name="Primarina">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/primarina.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/primarina.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/primarina.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Primarina">
-  <div class="mon-info">
-    <span class="mon-name">Primarina</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-fairy">FAIRY</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/primarina.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/primarina.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/primarina.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/primarina.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/primarina.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Primarina">
+      <div class="mon-info">
+        <span class="mon-name">Primarina</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-fairy">FAIRY</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="pyukumuku/" data-name="Pyukumuku">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/pyukumuku.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/pyukumuku.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/pyukumuku.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Pyukumuku">
-  <div class="mon-info">
-    <span class="mon-name">Pyukumuku</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/pyukumuku.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/pyukumuku.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/pyukumuku.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/pyukumuku.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/pyukumuku.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Pyukumuku">
+      <div class="mon-info">
+        <span class="mon-name">Pyukumuku</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="registeel/" data-name="Registeel">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/registeel.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/registeel.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/registeel.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Registeel">
-  <div class="mon-info">
-    <span class="mon-name">Registeel</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/registeel.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/registeel.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/registeel.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/registeel.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/registeel.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Registeel">
+      <div class="mon-info">
+        <span class="mon-name">Registeel</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="reuniclus/" data-name="Reuniclus">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/reuniclus.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/reuniclus.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/reuniclus.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Reuniclus">
-  <div class="mon-info">
-    <span class="mon-name">Reuniclus</span>
-    <div class="mon-types"><span class="type-badge type-psychic">PSYCHIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/reuniclus.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/reuniclus.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/reuniclus.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/reuniclus.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/reuniclus.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Reuniclus">
+      <div class="mon-info">
+        <span class="mon-name">Reuniclus</span>
+        <div class="mon-types"><span class="type-badge type-psychic">PSYCHIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="rhyperior/" data-name="Rhyperior">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/rhyperior.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/rhyperior.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/rhyperior.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Rhyperior">
-  <div class="mon-info">
-    <span class="mon-name">Rhyperior</span>
-    <div class="mon-types"><span class="type-badge type-ground">GROUND</span><span class="type-badge type-rock">ROCK</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/rhyperior.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/rhyperior.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/rhyperior.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/rhyperior.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/rhyperior.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Rhyperior">
+      <div class="mon-info">
+        <span class="mon-name">Rhyperior</span>
+        <div class="mon-types"><span class="type-badge type-ground">GROUND</span><span class="type-badge type-rock">ROCK</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="roserade/" data-name="Roserade">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/roserade.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/roserade.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/roserade.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Roserade">
-  <div class="mon-info">
-    <span class="mon-name">Roserade</span>
-    <div class="mon-types"><span class="type-badge type-grass">GRASS</span><span class="type-badge type-poison">POISON</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/roserade.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/roserade.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/roserade.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/roserade.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/roserade.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Roserade">
+      <div class="mon-info">
+        <span class="mon-name">Roserade</span>
+        <div class="mon-types"><span class="type-badge type-grass">GRASS</span><span class="type-badge type-poison">POISON</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="rotomheat/" data-name="Rotom-Heat">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/rotom-heat.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/rotom-heat.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/rotom-heat.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Rotom-Heat">
-  <div class="mon-info">
-    <span class="mon-name">Rotom-Heat</span>
-    <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span><span class="type-badge type-fire">FIRE</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/rotom-heat.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/rotom-heat.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/rotom-heat.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/rotom-heat.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/rotom-heat.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Rotom-Heat">
+      <div class="mon-info">
+        <span class="mon-name">Rotom-Heat</span>
+        <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span><span class="type-badge type-fire">FIRE</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="rotommow/" data-name="Rotom-Mow">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/rotom-mow.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/rotom-mow.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/rotom-mow.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Rotom-Mow">
-  <div class="mon-info">
-    <span class="mon-name">Rotom-Mow</span>
-    <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span><span class="type-badge type-grass">GRASS</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/rotom-mow.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/rotom-mow.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/rotom-mow.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/rotom-mow.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/rotom-mow.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Rotom-Mow">
+      <div class="mon-info">
+        <span class="mon-name">Rotom-Mow</span>
+        <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span><span class="type-badge type-grass">GRASS</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="salazzle/" data-name="Salazzle">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/salazzle.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/salazzle.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/salazzle.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Salazzle">
-  <div class="mon-info">
-    <span class="mon-name">Salazzle</span>
-    <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-fire">FIRE</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/salazzle.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/salazzle.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/salazzle.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/salazzle.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/salazzle.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Salazzle">
+      <div class="mon-info">
+        <span class="mon-name">Salazzle</span>
+        <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-fire">FIRE</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="sceptile/" data-name="Sceptile">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/sceptile.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/sceptile.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/sceptile.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Sceptile">
-  <div class="mon-info">
-    <span class="mon-name">Sceptile</span>
-    <div class="mon-types"><span class="type-badge type-grass">GRASS</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/sceptile.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/sceptile.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/sceptile.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/sceptile.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/sceptile.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Sceptile">
+      <div class="mon-info">
+        <span class="mon-name">Sceptile</span>
+        <div class="mon-types"><span class="type-badge type-grass">GRASS</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="scizor/" data-name="Scizor">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/scizor.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/scizor.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/scizor.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Scizor">
-  <div class="mon-info">
-    <span class="mon-name">Scizor</span>
-    <div class="mon-types"><span class="type-badge type-bug">BUG</span><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/scizor.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/scizor.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/scizor.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/scizor.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/scizor.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Scizor">
+      <div class="mon-info">
+        <span class="mon-name">Scizor</span>
+        <div class="mon-types"><span class="type-badge type-bug">BUG</span><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="seismitoad/" data-name="Seismitoad">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/seismitoad.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/seismitoad.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/seismitoad.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Seismitoad">
-  <div class="mon-info">
-    <span class="mon-name">Seismitoad</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/seismitoad.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/seismitoad.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/seismitoad.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/seismitoad.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/seismitoad.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Seismitoad">
+      <div class="mon-info">
+        <span class="mon-name">Seismitoad</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="sharpedo/" data-name="Sharpedo">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/sharpedo.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/sharpedo.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/sharpedo.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Sharpedo">
-  <div class="mon-info">
-    <span class="mon-name">Sharpedo</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-dark">DARK</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/sharpedo.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/sharpedo.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/sharpedo.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/sharpedo.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/sharpedo.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Sharpedo">
+      <div class="mon-info">
+        <span class="mon-name">Sharpedo</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-dark">DARK</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="shaymin/" data-name="Shaymin">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/shaymin.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/shaymin.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/shaymin.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Shaymin">
-  <div class="mon-info">
-    <span class="mon-name">Shaymin</span>
-    <div class="mon-types"><span class="type-badge type-grass">GRASS</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/shaymin.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/shaymin.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/shaymin.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/shaymin.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/shaymin.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Shaymin">
+      <div class="mon-info">
+        <span class="mon-name">Shaymin</span>
+        <div class="mon-types"><span class="type-badge type-grass">GRASS</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="silvallysteel/" data-name="Silvally-Steel">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/silvally-steel.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/silvally-steel.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/silvally-steel.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Silvally-Steel">
-  <div class="mon-info">
-    <span class="mon-name">Silvally-Steel</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/silvally-steel.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/silvally-steel.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/silvally-steel.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/silvally-steel.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/silvally-steel.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Silvally-Steel">
+      <div class="mon-info">
+        <span class="mon-name">Silvally-Steel</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="slowbro/" data-name="Slowbro">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/slowbro.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/slowbro.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/slowbro.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Slowbro">
-  <div class="mon-info">
-    <span class="mon-name">Slowbro</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-psychic">PSYCHIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/slowbro.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/slowbro.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/slowbro.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/slowbro.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/slowbro.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Slowbro">
+      <div class="mon-info">
+        <span class="mon-name">Slowbro</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-psychic">PSYCHIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="snorlax/" data-name="Snorlax">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/snorlax.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/snorlax.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/snorlax.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Snorlax">
-  <div class="mon-info">
-    <span class="mon-name">Snorlax</span>
-    <div class="mon-types"><span class="type-badge type-normal">NORMAL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/snorlax.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/snorlax.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/snorlax.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/snorlax.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/snorlax.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Snorlax">
+      <div class="mon-info">
+        <span class="mon-name">Snorlax</span>
+        <div class="mon-types"><span class="type-badge type-normal">NORMAL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="stakataka/" data-name="Stakataka">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/stakataka.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/stakataka.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/stakataka.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Stakataka">
-  <div class="mon-info">
-    <span class="mon-name">Stakataka</span>
-    <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-steel">STEEL</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/stakataka.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/stakataka.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/stakataka.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/stakataka.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/stakataka.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Stakataka">
+      <div class="mon-info">
+        <span class="mon-name">Stakataka</span>
+        <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-steel">STEEL</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="starmie/" data-name="Starmie">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/starmie.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/starmie.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/starmie.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Starmie">
-  <div class="mon-info">
-    <span class="mon-name">Starmie</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-psychic">PSYCHIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/starmie.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/starmie.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/starmie.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/starmie.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/starmie.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Starmie">
+      <div class="mon-info">
+        <span class="mon-name">Starmie</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-psychic">PSYCHIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="steelix/" data-name="Steelix">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/steelix.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/steelix.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/steelix.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Steelix">
-  <div class="mon-info">
-    <span class="mon-name">Steelix</span>
-    <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/steelix.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/steelix.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/steelix.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/steelix.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/steelix.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Steelix">
+      <div class="mon-info">
+        <span class="mon-name">Steelix</span>
+        <div class="mon-types"><span class="type-badge type-steel">STEEL</span><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="suicune/" data-name="Suicune">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/suicune.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/suicune.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/suicune.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Suicune">
-  <div class="mon-info">
-    <span class="mon-name">Suicune</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/suicune.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/suicune.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/suicune.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/suicune.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/suicune.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Suicune">
+      <div class="mon-info">
+        <span class="mon-name">Suicune</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="swampert/" data-name="Swampert">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/swampert.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/swampert.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/swampert.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Swampert">
-  <div class="mon-info">
-    <span class="mon-name">Swampert</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/swampert.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/swampert.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/swampert.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/swampert.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/swampert.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Swampert">
+      <div class="mon-info">
+        <span class="mon-name">Swampert</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-ground">GROUND</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="sylveon/" data-name="Sylveon">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/sylveon.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/sylveon.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/sylveon.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Sylveon">
-  <div class="mon-info">
-    <span class="mon-name">Sylveon</span>
-    <div class="mon-types"><span class="type-badge type-fairy">FAIRY</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/sylveon.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/sylveon.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/sylveon.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/sylveon.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/sylveon.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Sylveon">
+      <div class="mon-info">
+        <span class="mon-name">Sylveon</span>
+        <div class="mon-types"><span class="type-badge type-fairy">FAIRY</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="talonflame/" data-name="Talonflame">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/talonflame.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/talonflame.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/talonflame.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Talonflame">
-  <div class="mon-info">
-    <span class="mon-name">Talonflame</span>
-    <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/talonflame.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/talonflame.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/talonflame.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/talonflame.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/talonflame.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Talonflame">
+      <div class="mon-info">
+        <span class="mon-name">Talonflame</span>
+        <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="tentacruel/" data-name="Tentacruel">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/tentacruel.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/tentacruel.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/tentacruel.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Tentacruel">
-  <div class="mon-info">
-    <span class="mon-name">Tentacruel</span>
-    <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-poison">POISON</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/tentacruel.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/tentacruel.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/tentacruel.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/tentacruel.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/tentacruel.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Tentacruel">
+      <div class="mon-info">
+        <span class="mon-name">Tentacruel</span>
+        <div class="mon-types"><span class="type-badge type-water">WATER</span><span class="type-badge type-poison">POISON</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="terrakion/" data-name="Terrakion">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/terrakion.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/terrakion.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/terrakion.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Terrakion">
-  <div class="mon-info">
-    <span class="mon-name">Terrakion</span>
-    <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-fighting">FIGHTING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/terrakion.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/terrakion.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/terrakion.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/terrakion.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/terrakion.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Terrakion">
+      <div class="mon-info">
+        <span class="mon-name">Terrakion</span>
+        <div class="mon-types"><span class="type-badge type-rock">ROCK</span><span class="type-badge type-fighting">FIGHTING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="togekiss/" data-name="Togekiss">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/togekiss.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/togekiss.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/togekiss.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Togekiss">
-  <div class="mon-info">
-    <span class="mon-name">Togekiss</span>
-    <div class="mon-types"><span class="type-badge type-fairy">FAIRY</span><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/togekiss.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/togekiss.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/togekiss.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/togekiss.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/togekiss.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Togekiss">
+      <div class="mon-info">
+        <span class="mon-name">Togekiss</span>
+        <div class="mon-types"><span class="type-badge type-fairy">FAIRY</span><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="tornadus/" data-name="Tornadus">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/tornadus.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/tornadus.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/tornadus.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Tornadus">
-  <div class="mon-info">
-    <span class="mon-name">Tornadus</span>
-    <div class="mon-types"><span class="type-badge type-flying">FLYING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/tornadus.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/tornadus.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/tornadus.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/tornadus.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/tornadus.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Tornadus">
+      <div class="mon-info">
+        <span class="mon-name">Tornadus</span>
+        <div class="mon-types"><span class="type-badge type-flying">FLYING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="toxicroak/" data-name="Toxicroak">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/toxicroak.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/toxicroak.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/toxicroak.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Toxicroak">
-  <div class="mon-info">
-    <span class="mon-name">Toxicroak</span>
-    <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-fighting">FIGHTING</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/toxicroak.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/toxicroak.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/toxicroak.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/toxicroak.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/toxicroak.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Toxicroak">
+      <div class="mon-info">
+        <span class="mon-name">Toxicroak</span>
+        <div class="mon-types"><span class="type-badge type-poison">POISON</span><span class="type-badge type-fighting">FIGHTING</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="tsareena/" data-name="Tsareena">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/tsareena.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/tsareena.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/tsareena.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Tsareena">
-  <div class="mon-info">
-    <span class="mon-name">Tsareena</span>
-    <div class="mon-types"><span class="type-badge type-grass">GRASS</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/tsareena.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/tsareena.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/tsareena.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/tsareena.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/tsareena.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Tsareena">
+      <div class="mon-info">
+        <span class="mon-name">Tsareena</span>
+        <div class="mon-types"><span class="type-badge type-grass">GRASS</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="umbreon/" data-name="Umbreon">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/umbreon.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/umbreon.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/umbreon.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Umbreon">
-  <div class="mon-info">
-    <span class="mon-name">Umbreon</span>
-    <div class="mon-types"><span class="type-badge type-dark">DARK</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/umbreon.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/umbreon.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/umbreon.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/umbreon.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/umbreon.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Umbreon">
+      <div class="mon-info">
+        <span class="mon-name">Umbreon</span>
+        <div class="mon-types"><span class="type-badge type-dark">DARK</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="volcanion/" data-name="Volcanion">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/volcanion.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/volcanion.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/volcanion.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Volcanion">
-  <div class="mon-info">
-    <span class="mon-name">Volcanion</span>
-    <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-water">WATER</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/volcanion.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/volcanion.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/volcanion.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/volcanion.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/volcanion.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Volcanion">
+      <div class="mon-info">
+        <span class="mon-name">Volcanion</span>
+        <div class="mon-types"><span class="type-badge type-fire">FIRE</span><span class="type-badge type-water">WATER</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="zeraora/" data-name="Zeraora">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/zeraora.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/zeraora.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/zeraora.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Zeraora">
-  <div class="mon-info">
-    <span class="mon-name">Zeraora</span>
-    <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/zeraora.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/zeraora.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/zeraora.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/zeraora.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/zeraora.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Zeraora">
+      <div class="mon-info">
+        <span class="mon-name">Zeraora</span>
+        <div class="mon-types"><span class="type-badge type-electric">ELECTRIC</span></div>
+      </div>
+    </a>
     <a class="mon-card" href="zygarde10/" data-name="Zygarde-10%">
-  <img class="mon-sprite"
-    src="https://play.pokemonshowdown.com/sprites/ani/zygarde-10%.gif"
-    data-front="https://play.pokemonshowdown.com/sprites/ani/zygarde-10%.gif"
-    data-back="https://play.pokemonshowdown.com/sprites/ani-back/zygarde-10%.gif"
-    onmouseover="this.src=this.dataset.back"
-    onmouseout="this.src=this.dataset.front"
-    alt="Zygarde-10%">
-  <div class="mon-info">
-    <span class="mon-name">Zygarde-10%</span>
-    <div class="mon-types"><span class="type-badge type-dragon">DRAGON</span><span class="type-badge type-ground">GROUND</span></div>
-  </div>
-</a>
+      <img class="mon-sprite" src="https://play.pokemonshowdown.com/sprites/ani/zygarde10.gif" data-front="https://play.pokemonshowdown.com/sprites/ani/zygarde10.gif" data-back="https://play.pokemonshowdown.com/sprites/ani-back/zygarde10.gif" data-static-front="https://play.pokemonshowdown.com/sprites/gen5/zygarde10.png" data-static-back="https://play.pokemonshowdown.com/sprites/gen5-back/zygarde10.png" onmouseover="this.src=window.staticMode?this.dataset.staticBack:this.dataset.back" onmouseout="this.src=window.staticMode?this.dataset.staticFront:this.dataset.front" alt="Zygarde-10%">
+      <div class="mon-info">
+        <span class="mon-name">Zygarde-10%</span>
+        <div class="mon-types"></div>
+      </div>
+    </a>
   </div>
   <script>
     const input = document.querySelector('.search-bar');
     const cards = document.querySelectorAll('.mon-card');
-    input.addEventListener('input', function () {
+    input.addEventListener('input', function() {
       cards.forEach(card => {
         card.style.display =
-          card.dataset.name.toLowerCase().includes(this.value.toLowerCase())
-          ? '' : 'none';
+          card.dataset.name.toLowerCase().includes(this.value.toLowerCase()) ?
+          '' : 'none';
       });
     });
   </script>
 </body>
+
 </html>

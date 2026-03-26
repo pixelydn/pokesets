@@ -21,3 +21,7 @@ python generate_cards.py gen9/battle-factory/factory-sets.json 9 UU
 python generate_cards.py gen9/battle-factory/factory-sets.json 9 RU
 python generate_cards.py gen9/battle-factory/factory-sets.json 9 NU
 python generate_cards.py gen9/battle-factory/factory-sets.json 9 PU
+
+python generate_g7bf.py gen7/battle-factory/factory-sets.json ./
+python generate_g8bf.py gen8/battle-factory/factory-sets.json ./
+python generate_g9bf.py gen9/battle-factory/factory-sets.json ./
