@@ -5,7 +5,13 @@
    .g9bf = Gen 9 Battle Factory
    ============================================================ */
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: system-ui, sans-serif;
@@ -26,7 +32,7 @@ body {
   position: relative;
   padding-top: 1rem;
 }
- 
+
 .index-title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -35,7 +41,7 @@ body {
   text-transform: uppercase;
   line-height: 1.1;
 }
- 
+
 .index-sub {
   color: var(--text-dim);
   font-size: 0.78rem;
@@ -57,6 +63,7 @@ body {
   padding: 0.25rem 0.6rem;
   transition: color 0.15s, border-color 0.15s;
 }
+
 .showdown-link:hover {
   color: var(--accent);
   border-color: var(--accent);
@@ -77,6 +84,7 @@ body {
   outline: none;
   letter-spacing: 0.04em;
 }
+
 .search-bar:focus {
   border-bottom-color: var(--accent);
 }
@@ -86,7 +94,7 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.5rem;
 }
- 
+
 .mon-card {
   display: flex;
   align-items: center;
@@ -97,26 +105,30 @@ body {
   border-left: 3px solid var(--accent2);
   text-decoration: none;
 }
+
 .mon-card:hover {
   background: var(--surface2);
   border-left-color: var(--accent);
 }
- 
+
 .mon-sprite {
   width: 80px;
   height: 80px;
   object-fit: contain;
   image-rendering: pixelated;
 }
-.mon-sprite[data-broken] { display: none; }
- 
+
+.mon-sprite[data-broken] {
+  display: none;
+}
+
 .mon-info {
   text-align: left;
   margin-top: 0;
   flex: 1;
   padding-left: 0.75rem;
 }
- 
+
 .mon-name {
   display: block;
   color: var(--text);
@@ -126,7 +138,7 @@ body {
   text-transform: uppercase;
   margin-bottom: 0.35rem;
 }
- 
+
 .mon-types {
   display: flex;
   justify-content: flex-start;
@@ -141,7 +153,7 @@ body {
   max-width: 400px;
   margin: 0 auto;
 }
- 
+
 .tier-row {
   display: flex;
   align-items: center;
@@ -152,11 +164,12 @@ body {
   text-decoration: none;
   transition: background 0.12s, border-left-color 0.12s;
 }
+
 .tier-row:hover {
   background: var(--surface2);
   border-left-color: var(--accent);
 }
- 
+
 .tier-name {
   color: var(--text);
   font-size: 0.9rem;
@@ -182,6 +195,7 @@ body {
   cursor: pointer;
   transition: color 0.15s, border-color 0.15s;
 }
+
 .sprite-toggle:hover {
   color: var(--accent);
   border-color: var(--accent);
@@ -192,20 +206,20 @@ body {
    ============================================================ */
 .g7bf,
 .g8bf {
-  --bg:          #1a1e26;
-  --surface:     #252b38;
-  --surface2:    #2e3648;
-  --border:      #3a4256;
-  --accent:      #e8a020;
-  --accent2:     #4a8fd4;
-  --text:        #d4dce8;
-  --text-dim:    #7a8ba0;
+  --bg: #1a1e26;
+  --surface: #252b38;
+  --surface2: #2e3648;
+  --border: #3a4256;
+  --accent: #e8a020;
+  --accent2: #4a8fd4;
+  --text: #d4dce8;
+  --text-dim: #7a8ba0;
 
-  background:    var(--bg);
-  color:         var(--text);
-  font-family:   'Courier New', Courier, monospace;
-  padding:       2rem;
-  min-height:    100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2rem;
+  min-height: 100vh;
 }
 
 .g7bf .back-link,
@@ -218,8 +232,11 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
+
 .g7bf .back-link:hover,
-.g8bf .back-link:hover { color: var(--accent); }
+.g8bf .back-link:hover {
+  color: var(--accent);
+}
 
 .g7bf .page-header,
 .g8bf .page-header {
@@ -240,11 +257,16 @@ body {
   flex-shrink: 0;
   cursor: pointer;
 }
+
 .g7bf .page-header .sprite[data-broken],
-.g8bf .page-header .sprite[data-broken] { display: none; }
+.g8bf .page-header .sprite[data-broken] {
+  display: none;
+}
 
 .g7bf .page-header .name-block,
-.g8bf .page-header .name-block { flex: 1; }
+.g8bf .page-header .name-block {
+  flex: 1;
+}
 
 /* Grey title, I love this */
 .g7bf .page-header h1,
@@ -285,24 +307,81 @@ body {
 }
 
 /* Type Chart */
-.type-normal   { background: #8a8a6e; }
-.type-fire     { background: #c84800; }
-.type-water    { background: #2870c8; }
-.type-electric { background: #a87800; }
-.type-grass    { background: #3d8a30; }
-.type-ice      { background: #2888a0; }
-.type-fighting { background: #8a2820; }
-.type-poison   { background: #682878; }
-.type-ground   { background: #9a7840; }
-.type-flying   { background: #486898; }
-.type-psychic  { background: #a81840; }
-.type-bug      { background: #587030; }
-.type-rock     { background: #786838; }
-.type-ghost    { background: #383870; }
-.type-dragon   { background: #3830b8; }
-.type-dark     { background: #383028; }
-.type-steel    { background: #487888; }
-.type-fairy    { background: #984868; }
+.type-normal {
+  background-color: #8A8A59
+}
+
+.type-fire {
+  background-color: #F08030
+}
+
+.type-water {
+  background-color: #6890F0
+}
+
+.type-electric {
+  background-color: #F8D030
+}
+
+.type-fairy {
+  background-color: #F830D0
+}
+
+.type-grass {
+  background-color: #78C850
+}
+
+.type-ice {
+  background-color: #98D8D8
+}
+
+.type-fighting {
+  background-color: #C03028
+}
+
+.type-poison {
+  background-color: #A040A0
+}
+
+.type-ground {
+  background-color: #E0C068
+}
+
+.type-flying {
+  background-color: #A890F0
+}
+
+.type-psychic {
+  background-color: #F85888
+}
+
+.type-bug {
+  background-color: #A8B820
+}
+
+.type-rock {
+  background-color: #B8A038
+}
+
+.type-ghost {
+  background-color: #705898
+}
+
+.type-dragon {
+  background-color: #7038F8
+}
+
+.type-steel {
+  background-color: #B8B8D0
+}
+
+.type-dark {
+  background-color: #705848
+}
+
+.type-question {
+  background-color: #68A090
+}
 
 .g7bf .sets-label,
 .g8bf .sets-label {
@@ -330,10 +409,17 @@ body {
 }
 
 @media (max-width: 540px) {
+
   .g7bf .set-inner,
-  .g8bf .set-inner { grid-template-columns: 1fr; }
+  .g8bf .set-inner {
+    grid-template-columns: 1fr;
+  }
+
   .g7bf .set-moves,
-  .g8bf .set-moves { border-right: none; border-bottom: 1px solid var(--border); }
+  .g8bf .set-moves {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
 }
 
 .g7bf .set-moves,
@@ -387,7 +473,9 @@ body {
 }
 
 .g7bf .set-stats .row-label,
-.g8bf .set-stats .row-label { min-width: 78px; }
+.g8bf .set-stats .row-label {
+  min-width: 78px;
+}
 
 .g7bf .row-value,
 .g8bf .row-value {
@@ -428,22 +516,22 @@ body {
    Gen 9 Battle Factory
    ============================================================ */
 .g9bf {
-  --bg:          #1a1e26;
-  --surface:     #252b38;
-  --surface2:    #2e3648;
-  --border:      #3a4256;
-  --accent:      #e8a020;
-  --accent2:     #4a8fd4;
-  --text:        #d4dce8;
-  --text-dim:    #7a8ba0;
- 
-  background:    var(--bg);
-  color:         var(--text);
-  font-family:   'Courier New', Courier, monospace;
-  padding:       2rem;
-  min-height:    100vh;
+  --bg: #1a1e26;
+  --surface: #252b38;
+  --surface2: #2e3648;
+  --border: #3a4256;
+  --accent: #e8a020;
+  --accent2: #4a8fd4;
+  --text: #d4dce8;
+  --text-dim: #7a8ba0;
+
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2rem;
+  min-height: 100vh;
 }
- 
+
 .g9bf .back-link {
   display: inline-block;
   margin-bottom: 1.25rem;
@@ -453,8 +541,11 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-.g9bf .back-link:hover { color: var(--accent); }
- 
+
+.g9bf .back-link:hover {
+  color: var(--accent);
+}
+
 .g9bf .page-header {
   display: flex;
   align-items: flex-end;
@@ -463,7 +554,7 @@ body {
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--accent);
 }
- 
+
 .g9bf .page-header .sprite {
   width: 96px;
   height: 96px;
@@ -472,9 +563,15 @@ body {
   flex-shrink: 0;
   cursor: pointer;
 }
-.g9bf .page-header .sprite[data-broken] { display: none; }
-.g9bf .page-header .name-block { flex: 1; }
- 
+
+.g9bf .page-header .sprite[data-broken] {
+  display: none;
+}
+
+.g9bf .page-header .name-block {
+  flex: 1;
+}
+
 .g9bf .page-header h1 {
   font-size: 2rem;
   font-weight: 700;
@@ -483,13 +580,13 @@ body {
   text-transform: uppercase;
   line-height: 1.1;
 }
- 
+
 .g9bf .type-badges {
   display: flex;
   gap: 0.35rem;
   margin: 0.35rem 0 0.15rem;
 }
- 
+
 .g9bf .type-badge {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.64rem;
@@ -499,7 +596,7 @@ body {
   color: #fff;
   opacity: 0.88;
 }
- 
+
 .g9bf .page-header .subtitle {
   color: var(--text-dim);
   font-size: 0.8rem;
@@ -515,7 +612,7 @@ body {
   margin-top: 0.2rem;
   opacity: 0.7;
 }
- 
+
 .g9bf .sets-label {
   color: var(--accent2);
   font-size: 0.82rem;
@@ -524,7 +621,7 @@ body {
   font-weight: bold;
   margin-bottom: 0.75rem;
 }
- 
+
 .g9bf .set-block {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -532,25 +629,33 @@ body {
   margin-bottom: 1rem;
   overflow: hidden;
 }
- 
+
 .g9bf .set-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
- 
+
 @media (max-width: 540px) {
-  .g9bf .set-inner { grid-template-columns: 1fr; }
-  .g9bf .set-moves { border-right: none; border-bottom: 1px solid var(--border); }
+  .g9bf .set-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .g9bf .set-moves {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
 }
- 
+
 .g9bf .set-moves,
 .g9bf .set-stats {
   display: flex;
   flex-direction: column;
 }
- 
-.g9bf .set-moves { border-right: 1px solid var(--border); }
- 
+
+.g9bf .set-moves {
+  border-right: 1px solid var(--border);
+}
+
 .g9bf .row {
   display: flex;
   flex: 1;
@@ -561,10 +666,12 @@ body {
   font-size: 0.87rem;
   min-height: 2rem;
 }
- 
+
 .g9bf .set-moves .row:last-child,
-.g9bf .set-stats .row:last-child { border-bottom: none; }
- 
+.g9bf .set-stats .row:last-child {
+  border-bottom: none;
+}
+
 .g9bf .row-label {
   background: var(--surface2);
   color: var(--text-dim);
@@ -581,14 +688,16 @@ body {
   margin: -0.42rem 0.5rem -0.42rem -0.75rem;
   min-width: 64px;
 }
- 
-.g9bf .set-stats .row-label { min-width: 78px; }
- 
+
+.g9bf .set-stats .row-label {
+  min-width: 78px;
+}
+
 .g9bf .row-value {
   color: var(--text);
   word-break: break-word;
 }
- 
+
 .g9bf .item-icon {
   width: 24px;
   height: 24px;
@@ -612,7 +721,7 @@ body {
   border-top: 1px solid var(--border);
   background: var(--surface);
 }
- 
+
 .g9bf .extra-chip {
   background: var(--surface2);
   color: var(--text-dim);
@@ -621,4 +730,3 @@ body {
   padding: 0.1rem 0.5rem;
   border: 1px solid var(--border);
 }
- 
