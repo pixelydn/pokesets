@@ -306,6 +306,16 @@ body {
   opacity: 0.88;
 }
 
+img {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.15rem 0.45rem;
+  color: #ffffffae;
+  opacity: 0.88;
+}
+
 /* Type Chart */
 .type-normal {
   background-color: #8A8A59

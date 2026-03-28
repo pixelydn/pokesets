@@ -680,17 +680,7 @@
       </div>
     </a>
   </div>
-  <script>
-    const input = document.querySelector('.search-bar');
-    const cards = document.querySelectorAll('.mon-card');
-    input.addEventListener('input', function() {
-      cards.forEach(card => {
-        card.style.display =
-          card.dataset.name.toLowerCase().includes(this.value.toLowerCase()) ?
-          '' : 'none';
-      });
-    });
-  </script>
+  <script src="../../../search.js"></script>
 </body>
 
 </html>

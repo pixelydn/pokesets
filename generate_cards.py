@@ -317,17 +317,7 @@ def make_page(tier, gen, cards_html):
   <div class="mon-grid">
 {cards}
   </div>
-  <script>
-    const input = document.querySelector('.search-bar');
-    const cards = document.querySelectorAll('.mon-card');
-    input.addEventListener('input', function () {{
-      cards.forEach(card => {{
-        card.style.display =
-          card.dataset.name.toLowerCase().includes(this.value.toLowerCase())
-          ? '' : 'none';
-      }});
-    }});
-  </script>
+  <script src="../../../search.js"></script>
 </body>
 </html>""".format(dn=display_name, gen=gen, cls=body_class, h1=h1, cards=cards_html)
 
